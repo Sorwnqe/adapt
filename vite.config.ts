@@ -27,7 +27,6 @@ export default defineConfig({
               '@emotion/react',
               '@emotion/styled',
               '@tanstack/react-router',
-              'motion',
             ]
             if (match && !notSplit.includes(match)) {
               return match

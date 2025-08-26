@@ -60,7 +60,7 @@ const LitePaper: FC = () => {
                       transition: { duration: 0.4, delay: 1.6 },
                     }}
                   >
-                    <Box w="32px" h="32px" bg="white" borderRadius="4px" position="relative">
+                    <Box w="40px" h="40px" borderRadius="4px" position="relative">
                       <Image src="/images/Performance-3.png" />
                     </Box>
                   </motion.div>

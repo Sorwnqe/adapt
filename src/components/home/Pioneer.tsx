@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Heading, Text } from '@chakra-ui/react'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 
 const Pioneer = () => {
   return (

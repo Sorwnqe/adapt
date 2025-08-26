@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { Box, Center, Flex, Heading, Image, Text, VStack } from '@chakra-ui/react'
 import TasselEffect from '../TasselEffect'
 

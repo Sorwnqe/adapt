@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: MODERNIST;
+  src: url(/fonts/SK-MODERNIST-REGULAR.OTF);
+  font-weight: 100 400;
+}
+@font-face {
+  font-family: MODERNIST;
+  src: url(/fonts/SK-MODERNIST-BOLD.OTF);
+  font-weight: 500 900;
+}
+
+body {
+  background: #000!important;
+  color: #fff;
+  font-family: MODERNIST, sans-serif;
+  overflow-x: hidden;
+}

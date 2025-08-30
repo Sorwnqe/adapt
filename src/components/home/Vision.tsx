@@ -117,9 +117,9 @@ const Vision = () => {
                 lineHeight="1.2"
                 mb="60px"
               >
-                Tribute to the
+                Medallion Fund for the
                 <br />
-                Medallion Fund
+                Blockchain Era
               </Heading>
 
               <VStack align="flex-start" spacing="40px">

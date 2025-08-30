@@ -35,11 +35,11 @@ const HomeCard = () => {
         </Box>
 
         <Heading fontSize="22px" fontWeight="600" color="white" mb="16px" lineHeight="1.3">
-          Meta-RL Agen
+          Meta-RL Agent
         </Heading>
 
         <Text fontSize="15px" color="#868686" lineHeight="1.6" fontWeight="400" maxW="60%">
-          Reinforcement learning that learns how to learn
+          Reinforcement Learning for Automated Evolution and Improvement Processes
         </Text>
       </Box>
 
@@ -147,7 +147,7 @@ const HomeCard = () => {
         </Heading>
 
         <Text fontSize="15px" color="#868686" lineHeight="1.6" fontWeight="400" maxW="60%">
-          Reinforcement learning that learns how to learn
+          Harnesses community consensus to enhance RL agent's self-optimization
         </Text>
       </Box>
     </Grid>

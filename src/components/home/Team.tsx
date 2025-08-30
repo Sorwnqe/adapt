@@ -133,13 +133,13 @@ const Team = () => {
             mb="60px"
             mt="50px"
           >
-            Professional Team
+            Team
           </Heading>
           <Text fontSize="16px" color="#888" lineHeight="1.6">
-            AdaptAI is driven by a top-tier team, including an NUS AI professor
+            We Beat The Market
             <br />
-            and expert mathematicians, with plans to onboard traders <br />
-            to enhance its community-driven crypto
+            Adapt AI is a decentralized community of AI scientists, mathematicians, <br />
+            and algorithm engineers united by a shared vision: to outperform the market with AI.
           </Text>
         </Box>
       </motion.div>

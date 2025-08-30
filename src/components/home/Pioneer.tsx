@@ -47,12 +47,12 @@ const Pioneer = () => {
                   mb="16px"
                   color="white"
                 >
-                  01. On-Chain Finance
+                  02. Democratized, Efficient Markets
                 </Heading>
                 <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
-                  The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
-                  blockchain. AdaptAI drives this vision with AI-powered trading, boosting
-                  transparency and liquidity.
+                  AdaptAI fuses AI and Web3, leveraging community-driven learning to optimize
+                  trading and align with the Efficient Market Hypothesis, enhancing liquidity
+                  through accessible tools.
                 </Text>
               </Box>
               <Box>
@@ -62,12 +62,11 @@ const Pioneer = () => {
                   mb="16px"
                   color="white"
                 >
-                  01. On-Chain Finance
+                  03. Invest in the Liquidity Future
                 </Heading>
                 <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
-                  The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
-                  blockchain. AdaptAI drives this vision with AI-powered trading, boosting
-                  transparency and liquidity.
+                  Investing in AdaptAI is investing in the liquidity future, where AI and collective
+                  innovation create a dynamic, accessible crypto ecosystem for all.
                 </Text>
               </Box>
             </Flex>

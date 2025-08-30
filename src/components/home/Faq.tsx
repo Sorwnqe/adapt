@@ -118,9 +118,9 @@ const FAQ: FC = () => {
 
   const faqData = [
     {
-      question: '1. Can everyday people participate, and how?',
+      question: '1. Any threshold for participation?',
       answer:
-        "Absolutely! Anyone can join AdaptAI's mission to shape the crypto liquidity future. Simply sign up for our waitlist to be notified first when opportunities to participate become available.",
+        'Yes! Anyone can join AdaptAI’s mission to shape the crypto liquidity future. Simply sign up for our waitlist to be notified first when opportunities to participate become available.',
     },
     {
       question: '2. How will AdaptAI be released?',

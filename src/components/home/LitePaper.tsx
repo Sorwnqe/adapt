@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Text, Flex, Button, Image } from '@chakra-ui/react'
+import { Box, Center, Heading, Flex, Button, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FC } from 'react'
 
@@ -162,25 +162,15 @@ const LitePaper: FC = () => {
 
             {/* 右侧内容 */}
             <Box flex="1" maxW={{ base: '100%', lg: '600px' }}>
-              <Heading
-                fontSize={{ base: '20px', md: '20px' }}
-                lineHeight="1.4"
-                color="white"
-                mb="8px"
-              >
+              <Heading fontSize="20px" lineHeight="1.4" color="white" mb="8px">
                 Reinforcement Learning and Market
               </Heading>
-              <Heading
-                fontSize={{ base: '20px', md: '20px' }}
-                lineHeight="1.4"
-                color="white"
-                mb="8px"
-              >
-                RegimeDetection
+              <Heading fontSize="20px" lineHeight="1.4" color="white" mb="8px">
+                Regime Detection AI Specialized
               </Heading>
-              <Text fontSize={{ base: '20px', md: '20px' }} lineHeight="1.4" color="#fff">
-                in Cryptocurrency Trading
-              </Text>
+              <Heading fontSize="20px" lineHeight="1.4" color="white">
+                for Volatile Markets & Complex Systems
+              </Heading>
             </Box>
           </Flex>
         </Box>

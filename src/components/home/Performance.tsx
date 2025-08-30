@@ -62,8 +62,10 @@ const Performance = () => {
                   mb="20px"
                   lineHeight="1.6"
                 >
-                  The 2020–21 bull run masked failures; most lost it all in
-                  <br /> 2022 as rigid bots bought the dip to ruin.
+                  The 2020-21 bull run concealed failures. Rigid traditional bots tried to buy the
+                  dip,
+                  <br /> resulting in significant losses for most in 2022. Unlike the others, we
+                  adapt.
                 </Text>
 
                 <Text fontSize={{ base: '16px', md: '18px' }} color="#888" lineHeight="1.6">
@@ -109,7 +111,7 @@ const Performance = () => {
               <Image
                 src="/images/performance-drop.png"
                 pos="absolute"
-                transform={{ base: 'translatey(5%)', md: 'translatey(10%)' }}
+                transform={{ base: 'translatey(10%)', md: 'translatey(20%)' }}
                 zIndex="-1"
                 maxW={{ base: '150%', md: '70%' }}
               />
@@ -132,7 +134,7 @@ const Performance = () => {
           transition: { duration: 0.5, delay: 0.8 },
         }}
       >
-        <Center w="100%" mt={{ base: '60px', md: '120px' }} color="#fff" px="20px">
+        <Center w="100%" mt={{ base: '60px', md: '120px' }} color="#fff" px="20px" bg="#000">
           <Box
             maxW="1280px"
             w="100%"

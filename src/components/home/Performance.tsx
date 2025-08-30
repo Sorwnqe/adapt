@@ -15,8 +15,13 @@ const Performance = () => {
           transition: { duration: 0.5, delay: 0 },
         }}
       >
-        <Center w="100%" mt="120px" mb="60px">
-          <Heading fontSize="48px" fontWeight="600" color="white" textAlign="center">
+        <Center w="100%" mt={{ base: '60px', md: '120px' }} mb="60px" id="Performance">
+          <Heading
+            fontSize={{ base: '32px', md: '48px' }}
+            fontWeight="600"
+            color="white"
+            textAlign="center"
+          >
             Performance
           </Heading>
         </Center>
@@ -51,19 +56,24 @@ const Performance = () => {
                   We outperform.
                 </Heading>
 
-                <Text fontSize="18px" color="#888" mb="20px" lineHeight="1.6">
+                <Text
+                  fontSize={{ base: '16px', md: '18px' }}
+                  color="#888"
+                  mb="20px"
+                  lineHeight="1.6"
+                >
                   The 2020–21 bull run masked failures; most lost it all in
                   <br /> 2022 as rigid bots bought the dip to ruin.
                 </Text>
 
-                <Text fontSize="18px" color="#888" lineHeight="1.6">
+                <Text fontSize={{ base: '16px', md: '18px' }} color="#888" lineHeight="1.6">
                   AdaptAI sensed the bear, reduced risk, and even
                   <br /> profited from shorts.
                 </Text>
               </Box>
 
               {/* Right Chart Area */}
-              <Box position="relative" minH="400px">
+              <Box position="relative" minH="300px" mx="auto">
                 <motion.div
                   style={{ width: '100%' }}
                   initial={{ x: 150, opacity: 0 }}
@@ -91,7 +101,7 @@ const Performance = () => {
             </Flex>
 
             {/* Navigation Dots */}
-            <Center mt="40px" gap="12px" w="100%">
+            <Center mt={{ base: '40px', md: '140px' }} gap="12px" w="100%">
               <TasselEffect />
             </Center>
 
@@ -99,8 +109,9 @@ const Performance = () => {
               <Image
                 src="/images/performance-drop.png"
                 pos="absolute"
-                transform="translatey(20%)"
+                transform={{ base: 'translatey(5%)', md: 'translatey(10%)' }}
                 zIndex="-1"
+                maxW={{ base: '150%', md: '70%' }}
               />
               <Text color="#666" fontSize="14px">
                 Performance 02
@@ -121,15 +132,26 @@ const Performance = () => {
           transition: { duration: 0.5, delay: 0.8 },
         }}
       >
-        <Center w="100%" mt="120px" color="#fff" px="20px">
-          <Box maxW="1280px" w="100%">
+        <Center w="100%" mt={{ base: '60px', md: '120px' }} color="#fff" px="20px">
+          <Box
+            maxW="1280px"
+            w="100%"
+            bgImg="/images/performance-bg.png"
+            bgSize="100%"
+            bgRepeat="no-repeat"
+            p={{ base: '30px', md: '80px' }}
+          >
             <Heading fontSize="21px" fontWeight="400" mb="60px">
               Backtest Results (2020-2023, BTC/ETH):
             </Heading>
 
             <Flex direction={{ base: 'column', lg: 'row' }} gap="60px" align="flex-start">
               {/* Charts Area */}
-              <Image src="images/backtest-Result.png" width="70%" ml="-40px" />
+              <Image
+                src="images/backtest-Result.png"
+                width={{ base: '100%', md: '70%' }}
+                ml={{ base: '0', md: '-40px' }}
+              />
 
               {/* Info Cards */}
               <VStack spacing="20px" flex="1">
@@ -146,12 +168,13 @@ const Performance = () => {
                   <Box
                     w="100%"
                     bg="rgba(255, 255, 255, 0.05)"
+                    bgImg="/images/Backtest-Results-bg.png"
                     border="1px solid rgba(255, 255, 255, 0.1)"
                     borderRadius="12px"
                     p="24px"
-                    ml="-30px"
+                    ml={{ base: '0', md: '-30px' }}
                   >
-                    <Heading fontSize="18px" color="white" mb="12px">
+                    <Heading fontSize={{ base: '16px', md: '18px' }} color="white" mb="12px">
                       Static:
                     </Heading>
                     <Text fontSize="14px" color="#B0B0B0" lineHeight="1.6">
@@ -172,11 +195,12 @@ const Performance = () => {
                   <Box
                     w="100%"
                     bg="rgba(255, 255, 255, 0.05)"
+                    bgImg="/images/Backtest-Results-bg.png"
                     border="1px solid rgba(255, 255, 255, 0.1)"
                     borderRadius="12px"
                     p="24px"
                   >
-                    <Heading fontSize="18px" color="white" mb="12px">
+                    <Heading fontSize={{ base: '16px', md: '18px' }} color="white" mb="12px">
                       RL:
                     </Heading>
                     <Text fontSize="14px" color="#B0B0B0" lineHeight="1.6">

@@ -11,6 +11,7 @@ const HomeCard = () => {
       <Box
         bg="rgba(20, 20, 20, 54%)"
         border="1px solid rgba(255, 255, 255, 0.1)"
+        bgImg={{ base: '/images/Backtest-Results-bg.png', md: 'unset' }}
         borderRadius="16px"
         p="28px"
         backdropFilter="blur(8px)"
@@ -45,6 +46,7 @@ const HomeCard = () => {
       {/* Card 2: Trade the Weather */}
       <Box
         bg="rgba(20, 20, 20, 54%)"
+        bgImg={{ base: '/images/Backtest-Results-bg.png', md: 'unset' }}
         border="1px solid rgba(255, 255, 255, 0.1)"
         borderRadius="16px"
         p="28px"
@@ -80,6 +82,7 @@ const HomeCard = () => {
       {/* Card 3: Beyond Single Tasks */}
       <Box
         bg="rgba(20, 20, 20, 54%)"
+        bgImg={{ base: '/images/Backtest-Results-bg.png', md: 'unset' }}
         border="1px solid rgba(255, 255, 255, 0.1)"
         borderRadius="16px"
         p="28px"
@@ -115,6 +118,7 @@ const HomeCard = () => {
       {/* Card 4: Community-Driven */}
       <Box
         bg="rgba(20, 20, 20, 54%)"
+        bgImg={{ base: '/images/Backtest-Results-bg.png', md: 'unset' }}
         border="1px solid rgba(255, 255, 255, 0.1)"
         borderRadius="16px"
         p="28px"

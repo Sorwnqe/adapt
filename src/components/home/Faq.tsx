@@ -45,7 +45,14 @@ const FAQItem: FC<FAQItemProps> = ({ question, answer, index, isOpen, onToggle }
             bg: 'rgba(255, 255, 255, 0.02)',
           }}
         >
-          <Text fontSize="18px" fontWeight="500" color="white" lineHeight="1.4" flex="1" pr="20px">
+          <Text
+            fontSize={{ base: '16px', md: '18px' }}
+            fontWeight="500"
+            color="white"
+            lineHeight="1.4"
+            flex="1"
+            pr="20px"
+          >
             {question}
           </Text>
 
@@ -141,8 +148,13 @@ const FAQ: FC = () => {
         transition: { duration: 0.5, delay: 0.2 },
       }}
     >
-      <Center w="100%" mt="120px" mb="60px">
-        <Heading fontSize="48px" fontWeight="600" color="white" textAlign="center">
+      <Center w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
+        <Heading
+          fontSize={{ base: '32px', md: '48px' }}
+          fontWeight="600"
+          color="white"
+          textAlign="center"
+        >
           FAQ
         </Heading>
       </Center>

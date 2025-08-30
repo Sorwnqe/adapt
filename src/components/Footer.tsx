@@ -1,9 +1,12 @@
-import { Box, Flex, Heading, Text, Input, Button, HStack } from '@chakra-ui/react'
+import { Box, Flex, Heading, Text, Input, Button, HStack, useToast } from '@chakra-ui/react'
 import { FC, useState } from 'react'
-import { RiTelegram2Fill, RiTwitterXFill } from 'react-icons/ri'
 import { motion } from 'framer-motion'
+import EmailService from '../utils/sendEmail'
+import { socials } from '../env'
 
 export const Footer: FC = () => {
+  const toaster = useToast()
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -16,10 +19,27 @@ export const Footer: FC = () => {
       [field]: value,
     }))
   }
+  const copyEmail = async () => {
+    const res = await EmailService.sendContactEmailSecure(formData)
+    if (!res.success) {
+      toaster({
+        title: 'Error',
+        description: res.message,
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+        position: 'bottom',
+      })
+      return
+    }
+  }
 
-  const handleSubmit = () => {
-    // Handle form submission logic here
-    console.log('Form submitted:', formData)
+  const handleSubmit = async () => {
+    if (isSubmitting) return
+
+    setIsSubmitting(true)
+    copyEmail()
+    setIsSubmitting(false)
   }
 
   return (
@@ -32,21 +52,21 @@ export const Footer: FC = () => {
         transition: { duration: 1, delay: 0.5 },
       }}
     >
-      <Box bg="#000" color="#fff" py="80px" px="20px" mt="auto">
+      <Box bg="#000" color="#fff" py="80px" px="20px" mt="auto" id="Footer">
         <Flex
           maxW="1280px"
           mx="auto"
           justify="space-between"
           align="flex-start"
           direction={{ base: 'column', lg: 'row' }}
-          gap={{ base: '60px', lg: '80px' }}
+          gap={{ base: '40px', lg: '80px' }}
         >
           {/* Left Side - Content */}
           <Box flex="1" maxW={{ base: '100%', lg: '500px' }}>
             <Heading
               fontSize={{ base: '32px', md: '48px' }}
-              fontWeight="400"
               lineHeight={{ base: '36px', md: '52px' }}
+              fontWeight="400"
               mb="40px"
               color="#fff"
             >
@@ -64,37 +84,30 @@ export const Footer: FC = () => {
             </Text>
 
             {/* Social Icons */}
-            <HStack spacing="20px" mb="60px">
-              <Box
-                w="44px"
-                h="44px"
-                borderRadius="50%"
-                bg="#101010"
-                color="#B9B9B9"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor="pointer"
-                _hover={{ bg: '#2a2a2a' }}
-                transition="background 0.2s"
-              >
-                <RiTwitterXFill size={18} />
-              </Box>
-              <Box
-                w="44px"
-                h="44px"
-                borderRadius="50%"
-                bg="#101010"
-                color="#B9B9B9"
-                display="flex"
-                alignItems="center"
-                justifyContent="center"
-                cursor="pointer"
-                _hover={{ bg: '#2a2a2a' }}
-                transition="background 0.2s"
-              >
-                <RiTelegram2Fill size={18} />
-              </Box>
+            <HStack spacing="20px" mb={{ md: '60px' }}>
+              {socials.map((social) => (
+                <Box
+                  key={social.name}
+                  w="44px"
+                  h="44px"
+                  borderRadius="50%"
+                  bg="#101010"
+                  color="#B9B9B9"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  cursor="pointer"
+                  _hover={{ bg: '#2a2a2a' }}
+                  transition="background 0.2s"
+                  as="a"
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {social.icon}
+                  {/* <RiTwitterXFill size={18} /> */}
+                </Box>
+              ))}
             </HStack>
           </Box>
 
@@ -142,6 +155,7 @@ export const Footer: FC = () => {
                   _focus={{ borderColor: '#666', boxShadow: 'none' }}
                   value={formData.lastName}
                   onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  disabled={isSubmitting}
                 />
               </Box>
             </Flex>
@@ -151,7 +165,7 @@ export const Footer: FC = () => {
                 Email
               </Text>
               <Input
-                placeholder="steve@rr.com"
+                placeholder="name@domain.com"
                 bg="rgba(255,255,255,0.05)"
                 border="1px solid #333"
                 color="#fff"
@@ -160,6 +174,7 @@ export const Footer: FC = () => {
                 _focus={{ borderColor: '#666', boxShadow: 'none' }}
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
+                disabled={isSubmitting}
               />
             </Box>
 
@@ -174,13 +189,16 @@ export const Footer: FC = () => {
               fontWeight="400"
               _hover={{ bg: '#444', borderColor: '#555' }}
               _active={{ bg: '#555' }}
+              isLoading={isSubmitting}
+              loadingText="Opening..."
+              disabled={isSubmitting}
               onClick={handleSubmit}
             >
               Submit
             </Button>
           </Box>
         </Flex>
-        <Box maxW="1280px" mx="auto">
+        <Box maxW="1280px" mx="auto" mt={{ base: '40px', md: '0' }}>
           {/* Copyright */}
           <Text fontSize="14px" color="#444" mb="10px">
             Copyright © 2025 Adapt

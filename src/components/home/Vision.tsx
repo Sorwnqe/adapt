@@ -1,10 +1,19 @@
 import { motion } from 'framer-motion'
 import { Box, Center, Flex, Heading, Image, Text, VStack } from '@chakra-ui/react'
 import TasselEffect from '../TasselEffect'
+import useIsMobile from '../../hooks/useIsMobile'
 
 const Marker = () => {
+  const isMobile = useIsMobile()
   return (
-    <Box position="absolute" top="50%" left="10%" transform="translate(-50%, -50%)" zIndex={2}>
+    <Box
+      position="absolute"
+      top="50%"
+      left="10%"
+      transform="translate(-50%, -50%)"
+      zIndex={2}
+      id="Vision"
+    >
       {/* 实心圆点 */}
       <Box position="relative" w="8px" h="8px">
         {/* 实心圆 */}
@@ -21,9 +30,15 @@ const Marker = () => {
         style={{ position: 'absolute', top: '0', left: '100%' }}
         transform="scaleY(-1) translateY(100%)"
       >
-        <svg>
-          <polyline points="0,0 20,20 180,40" stroke="#656565" strokeWidth="1" fill="none" />
-        </svg>
+        {isMobile ? (
+          <svg>
+            <polyline points="0,0 20,20 100,40" stroke="#656565" strokeWidth="1" fill="none" />
+          </svg>
+        ) : (
+          <svg>
+            <polyline points="0,0 20,20 180,40" stroke="#656565" strokeWidth="1" fill="none" />
+          </svg>
+        )}
       </Box>
 
       {/* 标签文字 */}
@@ -34,7 +49,7 @@ const Marker = () => {
         position="absolute"
         top="20px"
         left="0%"
-        transform="translateX(-50%)"
+        transform={{ base: 'translateX(-20%)', md: 'translateX(-50%)' }}
       >
         James Harris Simons
       </Text>
@@ -75,8 +90,13 @@ const Vision = () => {
         transition: { duration: 0.5, delay: 0.2 },
       }}
     >
-      <Center w="100%" mt="120px" mb="60px">
-        <Heading fontSize="48px" fontWeight="600" color="white" textAlign="center">
+      <Center w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
+        <Heading
+          fontSize={{ base: '32px', md: '48px' }}
+          fontWeight="600"
+          color="white"
+          textAlign="center"
+        >
           Vision
         </Heading>
       </Center>
@@ -105,10 +125,15 @@ const Vision = () => {
               <VStack align="flex-start" spacing="40px">
                 {/* Unrivaled Legacy */}
                 <Box>
-                  <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
                     Unrivaled Legacy
                   </Heading>
-                  <Text fontSize="16px" color="#888" lineHeight="1.6">
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                     The Medallion Fund, founded by Nobel laureate Jim Simons, is the gold standard
                     of hedge funds, with a 66% average annual gross return (39% net) from 1988 to
                     2018.
@@ -117,10 +142,15 @@ const Vision = () => {
 
                 {/* Similarities */}
                 <Box>
-                  <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
                     Similarities
                   </Heading>
-                  <Text fontSize="16px" color="#888" lineHeight="1.6">
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                     AdaptAI echoes the Medallion Fund with its data-driven quantitative core,
                     adaptive strategies, and focus on risk-adjusted returns.
                   </Text>
@@ -128,10 +158,15 @@ const Vision = () => {
 
                 {/* Open Access */}
                 <Box>
-                  <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
                     Open Access
                   </Heading>
-                  <Text fontSize="16px" color="#888" lineHeight="1.6">
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                     While the Medallion Fund remains exclusive, closed to outside investors, AdaptAI
                     embraces a fully open approach.
                   </Text>
@@ -139,10 +174,15 @@ const Vision = () => {
 
                 {/* Financial Democratization */}
                 <Box>
-                  <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
                     Financial Democratization
                   </Heading>
-                  <Text fontSize="16px" color="#888" lineHeight="1.6">
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                     Honoring the Medallion Fund's legacy, AdaptAI welcomes all to its mission of
                     world-class wealth creation.
                   </Text>

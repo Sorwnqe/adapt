@@ -107,7 +107,7 @@ const TeamCard = ({
 
 const Team = () => {
   return (
-    <Box w="100%" py="80px" px="20px" mb="60px" maxW="1280px">
+    <Box w="100%" py={{ base: '40px', md: '80px' }} px="20px" mb="60px" maxW="1280px" id="Team">
       <motion.div
         style={{ width: '100%' }}
         initial={{ y: -100, opacity: 0.3 }}
@@ -118,7 +118,12 @@ const Team = () => {
         }}
       >
         <Box>
-          <Heading textAlign="center" fontSize="48px" fontWeight="600" color="white">
+          <Heading
+            textAlign="center"
+            fontSize={{ base: '32px', md: '48px' }}
+            fontWeight="600"
+            color="white"
+          >
             Team
           </Heading>
           <Heading

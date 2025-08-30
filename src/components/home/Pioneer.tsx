@@ -12,8 +12,8 @@ const Pioneer = () => {
         transition: { duration: 0.5, delay: 0.2 },
       }}
     >
-      <Center pb="300px" pos="relative">
-        <Box maxW="1280px" w="100%" mt="120px" mb="60px">
+      <Center pb={{ base: '50px', md: '300px' }} pos="relative" px="20px">
+        <Box maxW="1280px" w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
           <Heading
             fontSize={{ base: '36px', md: '40px' }}
             fontWeight="400"
@@ -22,13 +22,18 @@ const Pioneer = () => {
           >
             Pioneering the Liquidity Future
           </Heading>
-          <Flex align="center" gap="60px">
+          <Flex align="center" gap="60px" direction={{ base: 'column', md: 'row' }}>
             {/* Unrivaled Legacy */}
             <Box>
-              <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+              <Heading
+                fontSize={{ base: '20px', md: '24px' }}
+                fontWeight="600"
+                mb="16px"
+                color="white"
+              >
                 01. On-Chain Finance
               </Heading>
-              <Text fontSize="16px" color="#888" lineHeight="1.6">
+              <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                 The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
                 blockchain. AdaptAI drives this vision with AI-powered trading, boosting
                 transparency and liquidity.
@@ -36,20 +41,30 @@ const Pioneer = () => {
             </Box>
             <Flex direction="column" gap="60px">
               <Box>
-                <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                <Heading
+                  fontSize={{ base: '20px', md: '24px' }}
+                  fontWeight="600"
+                  mb="16px"
+                  color="white"
+                >
                   01. On-Chain Finance
                 </Heading>
-                <Text fontSize="16px" color="#888" lineHeight="1.6">
+                <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                   The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
                   blockchain. AdaptAI drives this vision with AI-powered trading, boosting
                   transparency and liquidity.
                 </Text>
               </Box>
               <Box>
-                <Heading fontSize="24px" fontWeight="600" mb="16px" color="white">
+                <Heading
+                  fontSize={{ base: '20px', md: '24px' }}
+                  fontWeight="600"
+                  mb="16px"
+                  color="white"
+                >
                   01. On-Chain Finance
                 </Heading>
-                <Text fontSize="16px" color="#888" lineHeight="1.6">
+                <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
                   The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
                   blockchain. AdaptAI drives this vision with AI-powered trading, boosting
                   transparency and liquidity.
@@ -58,8 +73,22 @@ const Pioneer = () => {
             </Flex>
           </Flex>
         </Box>
-        <Box w="70%" pos="absolute" bottom="0" left={0} zIndex="-1">
-          <video src="White-Particle.mp4" autoPlay muted loop />
+        <Box
+          w={{ base: '100%', md: '100%' }}
+          h={{ base: '70%', md: 'auto' }}
+          pos="absolute"
+          bottom="0"
+          left={{ base: '-20%', md: '-30%' }}
+          zIndex="-1"
+          opacity="0.5"
+        >
+          <video
+            src="White-Particle.mp4"
+            autoPlay
+            muted
+            loop
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
         </Box>
       </Center>
     </motion.div>

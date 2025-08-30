@@ -57,16 +57,16 @@ function Index() {
           alignItems: 'center',
         },
       }}
+      overflow="hidden"
     >
       <Center width="100%" top={0} left={0} position="absolute" zIndex="-1">
-        <Box width="100%" maxW="1580px" h="900px" px="20px">
+        <Box width="100%" maxW="1580px" h={{ base: '600px', md: '900px' }} opacity={0.5}>
           <video
             src="/BlackFuturisticComingSoon.mp4"
-            width="100%"
-            height="100%"
             autoPlay
             muted
             loop
+            style={{ objectFit: 'cover', height: '100%', width: '100%' }}
           ></video>
         </Box>
       </Center>
@@ -77,7 +77,14 @@ function Index() {
           transition: { duration: 1, delay: 1 },
         }}
       >
-        <Flex direction="column" w="100%" maxW="1280px" align="center" px="20px" h="900px">
+        <Flex
+          direction="column"
+          w="100%"
+          maxW="1280px"
+          align="center"
+          px="20px"
+          h={{ base: '500px', md: '900px' }}
+        >
           <Center textAlign="center" h="100%">
             <Heading
               fontSize={{ base: '36px', md: '55px' }}
@@ -131,7 +138,6 @@ function Index() {
           </Center>
         </Flex>
 
-        {/* 流苏效果 - 完成TODO部分：4个点 + 向下箭头 */}
         <Center position="relative">
           <TasselEffect />
         </Center>
@@ -162,38 +168,47 @@ function Index() {
         }}
       >
         <Center w="100%" mt="40px">
-          <Box
+          <Flex
             maxW="1280px"
             color="#fff"
             w="100%"
-            pb="82px"
+            pb={{ base: '22px', md: '82px' }}
             px="20px"
             flexDirection={{ base: 'column', md: 'row' }}
           >
-            <Box pos="absolute" bottom="0" left="0" w="100%" h="110%" zIndex="-1">
+            <Box
+              pos={{ base: 'initial', md: 'absolute' }}
+              bottom="0"
+              left="0"
+              w="100%"
+              h="110%"
+              zIndex="-1"
+            >
               <Image src="/images/market-changes.png" w="100%" h="110%" objectFit="contain" />
             </Box>
-            <Heading
-              mb="34px"
-              fontSize={{ base: '24px', md: '40px' }}
-              lineHeight={{ base: '24px', md: '46px' }}
-              fontWeight="400"
-              color="#fff"
-            >
-              Market changes So…we just Adapt.
-              <br />
-            </Heading>
-            <Text color="#868686" fontSize="19px">
-              Meta-RL lets AI trading agents adapt to
-            </Text>
-            <Text color="#868686" fontSize="19px">
-              any market - without retraining
-            </Text>
+            <Box>
+              <Heading
+                mb="34px"
+                fontSize={{ base: '24px', md: '40px' }}
+                lineHeight={{ base: '24px', md: '46px' }}
+                fontWeight="400"
+                color="#fff"
+              >
+                Market changes So…we just Adapt.
+                <br />
+              </Heading>
+              <Text color="#868686" fontSize="19px">
+                Meta-RL lets AI trading agents adapt to
+              </Text>
+              <Text color="#868686" fontSize="19px">
+                any market - without retraining
+              </Text>
 
-            <Flex mt="50px" gap="30px" justify="space-between">
-              <HomeCard />
-            </Flex>
-          </Box>
+              <Flex mt="50px" gap="30px" justify="space-between">
+                <HomeCard />
+              </Flex>
+            </Box>
+          </Flex>
         </Center>
       </motion.div>
 

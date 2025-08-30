@@ -10,6 +10,7 @@ export function truncateMiddle(
 
 export function jumpAnchor(target: string) {
   const anchorElement = document.getElementById(`${target}`)
+  console.log(anchorElement)
 
   if (anchorElement) {
     anchorElement.scrollIntoView({

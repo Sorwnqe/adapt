@@ -31,7 +31,6 @@ const PreviewLitePaper = () => {
 
   // 响应式宽度
   const containerWidth = useBreakpointValue({ base: 400, md: 600, lg: 900, xl: 1024 })!
-  console.log(containerWidth)
 
   // 文档加载成功
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {

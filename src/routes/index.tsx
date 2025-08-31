@@ -116,6 +116,15 @@ function Index() {
                 {t('complex market conditions.')}
               </Text>
 
+              <Text
+                fontSize={{ base: '16px', md: '22px' }}
+                color="#C5C5C5"
+                fontWeight={400}
+                lineHeight="28px"
+              >
+                {t('Incubated by VakLabs technology.')}
+              </Text>
+
               <Button
                 w="234px"
                 h="49px"

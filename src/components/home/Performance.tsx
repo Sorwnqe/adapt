@@ -69,8 +69,7 @@ const Performance = () => {
                 </Text>
 
                 <Text fontSize={{ base: '16px', md: '18px' }} color="#888" lineHeight="1.6">
-                  AdaptAI sensed the bear, reduced risk, and even
-                  <br /> profited from shorts.
+                  AdaptAI sensed the bear, reduced risk, and even profited from shorts.
                 </Text>
               </Box>
 

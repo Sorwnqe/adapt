@@ -140,9 +140,9 @@ const Performance = () => {
             bgImg="/images/performance-bg.png"
             bgSize="100%"
             bgRepeat="no-repeat"
-            p={{ base: '30px', md: '80px' }}
+            p={{ base: '30px 20px', md: '80px' }}
           >
-            <Heading fontSize="21px" fontWeight="400" mb="60px">
+            <Heading fontSize="21px" fontWeight="400" mb="30px">
               Backtest Results (2020-2023, BTC/ETH):
             </Heading>
 
@@ -196,15 +196,16 @@ const Performance = () => {
                   <Box
                     w="100%"
                     bg="rgba(255, 255, 255, 0.05)"
-                    bgImg="/images/Backtest-Results-bg.png"
+                    bgImg="/images/54eafab4073b1f2eaf8226c8958c0a2.png"
+                    bgSize="cover"
                     border="1px solid rgba(255, 255, 255, 0.1)"
                     borderRadius="12px"
                     p="24px"
                   >
-                    <Heading fontSize={{ base: '16px', md: '18px' }} color="white" mb="12px">
+                    <Heading fontSize={{ base: '16px', md: '18px' }} color="#000" mb="12px">
                       RL:
                     </Heading>
-                    <Text fontSize="14px" color="#B0B0B0" lineHeight="1.6">
+                    <Text fontSize="14px" color="#000" lineHeight="1.6">
                       PPO-driven, dynamic sub-strategy /cash switching (regime-aware)
                     </Text>
                   </Box>

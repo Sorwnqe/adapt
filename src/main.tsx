@@ -7,6 +7,8 @@ import { routeTree } from './routeTree.gen'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import './index.css'
+import { ModalProvider } from './ModalContext'
+import PreviewLitePaper from './components/home/PreviewLitePaper'
 
 // Create a new router instance
 const router = createRouter({ routeTree })
@@ -50,7 +52,10 @@ if (rootElement) {
             },
           })}
         >
-          <RouterProvider router={router} />
+          <ModalProvider>
+            <RouterProvider router={router} />
+            <PreviewLitePaper />
+          </ModalProvider>
         </ChakraProvider>
       </QueryClientProvider>
     </StrictMode>

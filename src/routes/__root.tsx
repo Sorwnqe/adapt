@@ -5,14 +5,16 @@ import { Footer } from '../components/Footer.tsx'
 import { Flex } from '@chakra-ui/react'
 
 export const Route = createRootRoute({
-  component: () => (
-    <>
-      <Flex as="main" direction="column" position="relative" zIndex={1}>
-        <NavigationBar />
-        <Outlet />
-        <Footer />
-        {/* <TanStackRouterDevtools /> */}
-      </Flex>
-    </>
-  ),
+  component: () => {
+    return (
+      <>
+        <Flex as="main" direction="column" position="relative" zIndex={1}>
+          <NavigationBar />
+          <Outlet />
+          <Footer />
+          {/* <TanStackRouterDevtools /> */}
+        </Flex>
+      </>
+    )
+  },
 })

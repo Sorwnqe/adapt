@@ -1,8 +1,10 @@
 import { Box, Center, Heading, Flex, Button, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FC } from 'react'
+import { useLitePaperModal } from '../../ModalContext'
 
 const LitePaper: FC = () => {
+  const { onOpen } = useLitePaperModal()
   return (
     <motion.div
       style={{ width: '100%' }}
@@ -151,10 +153,7 @@ const LitePaper: FC = () => {
                 _active={{
                   transform: 'translateY(0)',
                 }}
-                as="a"
-                href="https://docsend.com/view/7nus8ncjpg9xun3w"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={onOpen}
               >
                 Click to view
               </Button>

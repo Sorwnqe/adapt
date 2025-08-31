@@ -105,7 +105,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                {t('Breakthrough RL algorithm that adapts with market conditions,')}
+                {t('The 1st Meta Reinforcement Learning AI Agent that adapts to ALL ')}
               </Text>
               <Text
                 fontSize={{ base: '16px', md: '22px' }}
@@ -113,7 +113,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                {t('powered by VakLabs technology')}
+                {t('complex market conditions.')}
               </Text>
 
               <Button

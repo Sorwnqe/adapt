@@ -26,11 +26,12 @@ const PreviewLitePaper = () => {
   const { isOpen, onClose } = useLitePaperModal()
   const [numPages, setNumPages] = useState(0)
   const [pageNumber, setPageNumber] = useState(1)
-  const [scale, setScale] = useState(1)
+  const [scale, setScale] = useState(0.9)
   const [loading, setLoading] = useState(true)
 
   // 响应式宽度
-  const containerWidth = useBreakpointValue({ base: 400, md: 800, lg: 1024 })!
+  const containerWidth = useBreakpointValue({ base: 400, md: 600, lg: 900, xl: 1024 })!
+  console.log(containerWidth)
 
   // 文档加载成功
   const onDocumentLoadSuccess = useCallback(({ numPages }: { numPages: number }) => {
@@ -52,7 +53,7 @@ const PreviewLitePaper = () => {
 
   // 缩放与下载
   const zoomIn = () => setScale((s) => Math.min(s + 0.2, 3))
-  const zoomOut = () => setScale((s) => Math.max(s - 0.2, 0.6))
+  const zoomOut = () => setScale((s) => Math.max(s - 0.2, 0.4))
   const downloadPDF = () => window.open('/AdaptAI_technical_white_paper.pdf', '_blank')
 
   return (
@@ -112,41 +113,38 @@ const PreviewLitePaper = () => {
           bg="rgba(0,0,0,0.5)"
           display="flex"
           justifyContent="center"
-          alignItems="center"
           p={0}
           overflow="auto"
         >
-          <Flex position="relative" w="full" h="full" justifyContent="center" alignItems="center">
-            {loading && (
-              <Center position="absolute" top={0} left={0} w="full" h="full" zIndex={10}>
-                <Spinner size="xl" color="white" />
-              </Center>
-            )}
-            <TransformWrapper
-              wheel={{
-                disabled: false, // 打开滚轮缩放
-                step: 0.1, // 每次滚动改变 0.1 倍
-              }}
-              doubleClick={{ disabled: true }}
-            >
-              <TransformComponent>
-                <Document
-                  file="/AdaptAI_technical_white_paper.pdf"
-                  onLoadSuccess={onDocumentLoadSuccess}
-                  loading={null}
-                  noData="pdf file load failed"
-                >
-                  <Page
-                    pageNumber={pageNumber}
-                    width={containerWidth}
-                    renderAnnotationLayer={false}
-                    renderTextLayer={false}
-                    scale={scale}
-                  />
-                </Document>
-              </TransformComponent>
-            </TransformWrapper>
-          </Flex>
+          {loading && (
+            <Center position="absolute" top={0} left={0} w="full" h="full" zIndex={10}>
+              <Spinner size="xl" color="white" />
+            </Center>
+          )}
+          <TransformWrapper
+            wheel={{
+              disabled: false, // 打开滚轮缩放
+              step: 0.1, // 每次滚动改变 0.1 倍
+            }}
+            doubleClick={{ disabled: true }}
+          >
+            <TransformComponent>
+              <Document
+                file="/AdaptAI_technical_white_paper.pdf"
+                onLoadSuccess={onDocumentLoadSuccess}
+                loading={null}
+                noData="pdf file load failed"
+              >
+                <Page
+                  pageNumber={pageNumber}
+                  width={containerWidth}
+                  renderAnnotationLayer={false}
+                  renderTextLayer={false}
+                  scale={scale}
+                />
+              </Document>
+            </TransformComponent>
+          </TransformWrapper>
         </ModalBody>
 
         {/* 底部工具栏（移动端可见） */}
@@ -180,7 +178,7 @@ const PreviewLitePaper = () => {
             aria-label="zoom out"
             icon={<MdZoomOut />}
             onClick={zoomOut}
-            isDisabled={scale <= 0.6}
+            isDisabled={scale <= 0.4}
           />
           <IconButton aria-label="zoom in" icon={<MdZoomIn />} onClick={zoomIn} />
           <IconButton aria-label="close" icon={<IoIosClose />} onClick={onClose} />

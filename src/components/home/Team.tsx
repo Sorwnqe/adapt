@@ -130,16 +130,16 @@ const Team = () => {
             fontSize={{ base: '36px', md: '40px' }}
             fontWeight="400"
             lineHeight="1.2"
-            mb="60px"
+            mb="10px"
             mt="50px"
           >
-            Team
+            We Beat The Market
           </Heading>
           <Text fontSize="16px" color="#888" lineHeight="1.6">
-            We Beat The Market
             <br />
-            Adapt AI is a decentralized community of AI scientists, mathematicians, <br />
-            and algorithm engineers united by a shared vision: to outperform the market with AI.
+            Adapt AI is a decentralized community of AI scientists,
+            <br /> mathematicians, and algorithm engineers united by a shared <br />
+            vision: to outperform the market with AI.
           </Text>
         </Box>
       </motion.div>

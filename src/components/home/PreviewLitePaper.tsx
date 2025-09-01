@@ -114,6 +114,8 @@ const PreviewLitePaper = () => {
           justifyContent="center"
           p={0}
           overflow="auto"
+          alignItems={{ base: 'center', md: 'start' }}
+          pt={{ base: '20px', md: '0' }}
         >
           {loading && (
             <Center position="absolute" top={0} left={0} w="full" h="full" zIndex={10}>

@@ -86,6 +86,7 @@ const Pioneer = () => {
             autoPlay
             loop
             muted
+            playsInline
           >
             <source src="/video/White-Particle.mp4" type="video/mp4"></source>
           </video>

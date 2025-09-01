@@ -69,7 +69,7 @@ const LitePaper: FC = () => {
                   transition: { duration: 1, delay: 1 },
                 }}
               >
-                <video width="100%" autoPlay loop muted ref={videoRef}>
+                <video width="100%" autoPlay loop muted ref={videoRef} playsInline>
                   <source src="/video/BlackandWhite.mp4" type="video/mp4"></source>
                 </video>
               </motion.div>

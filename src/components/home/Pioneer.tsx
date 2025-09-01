@@ -82,12 +82,13 @@ const Pioneer = () => {
           opacity="0.5"
         >
           <video
-            src="/video/White-Particle.mp4"
-            autoPlay
-            muted
-            loop
             style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-          />
+            autoPlay
+            loop
+            muted
+          >
+            <source src="/video/White-Particle.mp4" type="video/mp4"></source>
+          </video>
         </Box>
       </Center>
     </motion.div>

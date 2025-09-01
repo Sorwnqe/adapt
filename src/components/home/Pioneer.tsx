@@ -82,7 +82,7 @@ const Pioneer = () => {
           opacity="0.5"
         >
           <video
-            src="White-Particle.mp4"
+            src="/video/White-Particle.mp4"
             autoPlay
             muted
             loop

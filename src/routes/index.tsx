@@ -62,7 +62,7 @@ function Index() {
       <Center width="100%" top={0} left={0} position="absolute" zIndex="-1">
         <Box width="100%" maxW="1580px" h={{ base: '600px', md: '900px' }} opacity={0.5}>
           <video
-            src="/BlackFuturisticComingSoon.mp4"
+            src="/video/BlackFuturisticComingSoon.mp4"
             autoPlay
             muted
             loop
@@ -220,7 +220,6 @@ function Index() {
           </Flex>
         </Center>
       </motion.div>
-
       <Performance />
       <Vision />
       <Pioneer />

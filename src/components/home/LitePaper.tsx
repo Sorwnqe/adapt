@@ -1,30 +1,53 @@
 import { Box, Center, Heading, Flex, Button, Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FC } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { useLitePaperModal } from '../../ModalContext'
 
 const LitePaper: FC = () => {
   const { onOpen } = useLitePaperModal()
+  const [top, setTop] = useState<string>('100px')
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const videoEl = videoRef.current
+    if (!videoEl) return
+
+    const updateTop = () => {
+      const height = videoEl.getBoundingClientRect().height
+      setTop(`${height / 2}px`)
+    }
+    updateTop()
+    const resizeObserver = new ResizeObserver(() => {
+      updateTop()
+    })
+    resizeObserver.observe(videoEl)
+    return () => {
+      resizeObserver.disconnect()
+    }
+  }, [])
+
   return (
-    <motion.div
-      style={{ width: '100%' }}
-      initial={{ y: 50, opacity: 0 }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.5, delay: 0.2 },
-      }}
-    >
-      <Center w="100%" mt={{ base: '30px', md: '120px' }} mb="60px" id="Litepaper">
-        <Heading
-          fontSize={{ base: '32px', md: '48px' }}
-          fontWeight="600"
-          color="white"
-          textAlign="center"
-        >
-          Litepaper
-        </Heading>
-      </Center>
+    <>
+      <motion.div
+        style={{ width: '100%' }}
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.2 },
+        }}
+      >
+        <Center w="100%" mt={{ base: '30px', md: '120px' }} mb="60px" id="Litepaper">
+          <Heading
+            fontSize={{ base: '32px', md: '48px' }}
+            fontWeight="600"
+            color="white"
+            textAlign="center"
+          >
+            Litepaper
+          </Heading>
+        </Center>
+      </motion.div>
 
       <Center w="100%" px="20px" mb="80px">
         <Box maxW="1280px" w="100%" position="relative">
@@ -33,26 +56,37 @@ const LitePaper: FC = () => {
             position="relative"
             w="100%"
             overflow="hidden"
-            h={{ base: '150px', md: '400px' }}
+            h={{ base: '150px', md: '450px' }}
             mb="60px"
           >
             {/* 第一步：黑色背景 */}
             <Box w="100%" h="100%" borderRadius="24px" position="relative" zIndex="-1">
-              <video src="/BlackandWhite.mp4" width="100%" autoPlay loop muted></video>
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{
+                  y: 0,
+                  opacity: 1,
+                  transition: { duration: 1, delay: 1 },
+                }}
+              >
+                <video
+                  src="/video/BlackandWhite.mp4"
+                  width="100%"
+                  autoPlay
+                  loop
+                  muted
+                  ref={videoRef}
+                ></video>
+              </motion.div>
               {/* 第二步：白色圆圈 */}
 
-              <Box
-                top={{ base: '100px', md: '320px' }}
-                pos="absolute"
-                left={'50%'}
-                transform={'translateX(-50%)'}
-              >
+              <Box top={top} pos="absolute" left={'50%'} transform={'translate(-50%, -40%)'}>
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{
                     scale: 1,
                     opacity: 1,
-                    transition: { duration: 0.6, delay: 1.0 },
+                    transition: { duration: 0.6, delay: 1.5 },
                   }}
                 >
                   <Box
@@ -174,7 +208,7 @@ const LitePaper: FC = () => {
           </Flex>
         </Box>
       </Center>
-    </motion.div>
+    </>
   )
 }
 

@@ -19,9 +19,8 @@ import { MdZoomIn, MdZoomOut, MdGetApp } from 'react-icons/md'
 import { useLitePaperModal } from '../../ModalContext'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
-import pdf from '../../pdf/AdaptAI_technical_white_paper.pdf'
 
-pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs'
+pdfjs.GlobalWorkerOptions.workerSrc = `/pdf.worker.min.js`
 
 const PreviewLitePaper = () => {
   const { isOpen, onClose } = useLitePaperModal()
@@ -132,7 +131,7 @@ const PreviewLitePaper = () => {
           >
             <TransformComponent>
               <Document
-                file={pdf}
+                file="/whitepaper/AdaptAI_technical_white_paper.pdf"
                 onLoadSuccess={onDocumentLoadSuccess}
                 loading={null}
                 noData="pdf file load failed"

@@ -15,7 +15,7 @@ const Pioneer = () => {
       <Center pb={{ base: '50px', md: '300px' }} pos="relative" px="20px">
         <Box maxW="1280px" w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
           <Heading
-            fontSize={{ base: '36px', md: '40px' }}
+            fontSize={{ base: '32px', md: '40px' }}
             fontWeight="400"
             lineHeight="1.2"
             mb="60px"

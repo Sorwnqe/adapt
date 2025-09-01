@@ -112,7 +112,7 @@ const Vision = () => {
             {/* Left Content */}
             <Box flex="1" maxW={{ base: '100%', lg: '600px' }}>
               <Heading
-                fontSize={{ base: '36px', md: '48px' }}
+                fontSize={{ base: '32px', md: '48px' }}
                 fontWeight="400"
                 lineHeight="1.2"
                 mb="60px"

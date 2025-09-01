@@ -127,7 +127,7 @@ const Team = () => {
             Team
           </Heading>
           <Heading
-            fontSize={{ base: '36px', md: '40px' }}
+            fontSize={{ base: '32px', md: '40px' }}
             fontWeight="400"
             lineHeight="1.2"
             mb="10px"

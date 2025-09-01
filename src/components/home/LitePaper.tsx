@@ -122,7 +122,7 @@ const LitePaper: FC = () => {
             align="flex-start"
             justify="space-between"
             gap="60px"
-            px="40px"
+            px={{ base: '0', md: '40px' }}
           >
             {/* 左侧内容 */}
             <Box flex="1" maxW={{ base: '100%', lg: '500px' }}>

@@ -87,12 +87,12 @@ function Index() {
         >
           <Center textAlign="center" h="100%">
             <Heading
-              fontSize={{ base: '36px', md: '55px' }}
+              fontSize={{ base: '32px', md: '55px' }}
               fontWeight="bold"
               color="#fff"
               animation={`${titleAnimation} 5s infinite linear`}
               minH={{ base: 'auto', xl: '400px' }}
-              lineHeight="66px"
+              lineHeight={{ base: '42px', md: '66px' }}
             >
               <GraduallyEnteringText text={'AI That Adapts'} />
               <br />
@@ -126,13 +126,13 @@ function Index() {
               </Text>
 
               <Button
-                w="234px"
-                h="49px"
-                mt="60px"
+                w={{ base: '180px', md: '234px' }}
+                h={{ base: '38px', md: '49px' }}
+                mt={{ base: '40px', md: '60px' }}
                 color="#c8c8c8"
                 fontWeight="700"
                 padding="15px 60px"
-                fontSize="22px"
+                fontSize={{ base: '18px', md: '22px' }}
                 borderRadius="24px"
                 sx={{
                   // background: '#131313',
@@ -141,7 +141,7 @@ function Index() {
                   bgSize: 'cover',
                 }}
               >
-                Join Whilelist
+                Join Wishlist
               </Button>
             </Heading>
           </Center>

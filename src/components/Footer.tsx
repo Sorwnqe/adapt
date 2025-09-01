@@ -120,13 +120,18 @@ export const Footer: FC = () => {
             minW={{ base: '100%', lg: '400px' }}
             maxW="500px"
           >
-            <Heading fontSize="28px" fontWeight="400" mb="30px" color="#fff">
+            <Heading
+              fontSize={{ base: '22px', md: '28px' }}
+              fontWeight="400"
+              mb="30px"
+              color="#fff"
+            >
               Contact Us
             </Heading>
 
             <Flex gap="20px" mb="20px">
               <Box flex="1">
-                <Text fontSize="14px" color="#888" mb="8px">
+                <Text fontSize={{ base: '14px', md: '14px' }} color="#888" mb="8px">
                   First Name
                 </Text>
                 <Input
@@ -142,7 +147,7 @@ export const Footer: FC = () => {
                 />
               </Box>
               <Box flex="1">
-                <Text fontSize="14px" color="#888" mb="8px">
+                <Text fontSize={{ base: '14px', md: '14px' }} color="#888" mb="8px">
                   Last Name
                 </Text>
                 <Input
@@ -161,7 +166,7 @@ export const Footer: FC = () => {
             </Flex>
 
             <Box mb="30px">
-              <Text fontSize="14px" color="#888" mb="8px">
+              <Text fontSize={{ base: '14px', md: '14px' }} color="#888" mb="8px">
                 Email
               </Text>
               <Input

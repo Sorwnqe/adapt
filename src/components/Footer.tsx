@@ -52,9 +52,9 @@ export const Footer: FC = () => {
         transition: { duration: 1, delay: 0.5 },
       }}
     >
-      <Box bg="#000" color="#fff" py="80px" px="20px" mt="auto" id="Footer">
+      <Box bg="#000" color="#fff" py="80px" px="20px" mt="auto" id="About">
         <Flex
-          maxW="1280px"
+          maxW="1200px"
           mx="auto"
           justify="space-between"
           align="flex-start"
@@ -203,7 +203,7 @@ export const Footer: FC = () => {
             </Button>
           </Box>
         </Flex>
-        <Box maxW="1280px" mx="auto" mt={{ base: '40px', md: '0' }}>
+        <Box maxW="1200px" mx="auto" mt={{ base: '40px', md: '0' }}>
           {/* Copyright */}
           <Text fontSize="14px" color="#444" mb="10px">
             Copyright © 2025 Adapt

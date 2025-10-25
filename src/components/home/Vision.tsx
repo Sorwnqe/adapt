@@ -102,7 +102,7 @@ const Vision = () => {
       </Center>
 
       <Center w="100%" color="#fff" px="20px">
-        <Box maxW="1280px" w="100%">
+        <Box maxW="1200px" w="100%">
           <Flex
             direction={{ base: 'column', lg: 'row' }}
             align="flex-start"

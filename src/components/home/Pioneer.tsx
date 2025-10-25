@@ -1,5 +1,6 @@
 import { Box, Center, Flex, Heading, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import Title from './Title'
 
 const Pioneer = () => {
   return (
@@ -12,64 +13,132 @@ const Pioneer = () => {
         transition: { duration: 0.5, delay: 0.2 },
       }}
     >
-      <Center pb={{ base: '50px', md: '300px' }} pos="relative" px="20px">
-        <Box maxW="1280px" w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
-          <Heading
-            fontSize={{ base: '32px', md: '40px' }}
-            fontWeight="400"
-            lineHeight="1.2"
-            mb="60px"
+      <motion.div
+        style={{ width: '100%', position: 'relative' }}
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, delay: 0.4 },
+        }}
+      >
+        <Box mt="104px">
+          <Title>Strategy</Title>
+        </Box>
+      </motion.div>
+      <Center pb={{ base: '50px', md: '300px' }} pos="relative" px="20px" id="Strategy">
+        <Box maxW="1200px" w="100%" mt={{ base: '60px', md: '120px' }} mb="60px">
+          <motion.div
+            style={{ width: '100%', position: 'relative' }}
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.5, delay: 0.4 },
+            }}
           >
-            Pioneering the Liquidity Future
-          </Heading>
-          <Flex align="center" gap="60px" direction={{ base: 'column', md: 'row' }}>
-            {/* Unrivaled Legacy */}
+            <Heading
+              fontSize={{ base: '32px', md: '40px' }}
+              fontWeight="400"
+              lineHeight="1.2"
+              mb="60px"
+            >
+              Volatility=Profit.
+              <br />
+              Adapt, Earn, Strategy Evolves
+            </Heading>
             <Box>
-              <Heading
-                fontSize={{ base: '20px', md: '24px' }}
-                fontWeight="600"
-                mb="16px"
-                color="white"
-              >
-                01. On-Chain Finance
-              </Heading>
-              <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
-                The SEC’s “Project Crypto” integrates America’s trillion-dollar markets onto
-                blockchain. AdaptAI drives this vision with AI-powered trading, boosting
-                transparency and liquidity.
+              <Text fontSize={{ base: '16px', md: '18px' }} color="#888" mb="20px" lineHeight="1.6">
+                Crypto volatility=quant edge. AdaptAI’s flex quant solutions
+                <br /> turn swings into gains-we adapt via nonstop strategy expansion.
               </Text>
             </Box>
-            <Flex direction="column" gap="60px">
-              <Box>
-                <Heading
-                  fontSize={{ base: '20px', md: '24px' }}
-                  fontWeight="600"
-                  mb="16px"
-                  color="white"
-                >
-                  02. Democratized, Efficient Markets
-                </Heading>
-                <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
-                  AdaptAI fuses AI and Web3, leveraging community-driven learning to optimize
-                  trading and align with the Efficient Market Hypothesis, enhancing liquidity
-                  through accessible tools.
-                </Text>
-              </Box>
-              <Box>
-                <Heading
-                  fontSize={{ base: '20px', md: '24px' }}
-                  fontWeight="600"
-                  mb="16px"
-                  color="white"
-                >
-                  03. Invest in the Liquidity Future
-                </Heading>
-                <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
-                  Investing in AdaptAI is investing in the liquidity future, where AI and collective
-                  innovation create a dynamic, accessible crypto ecosystem for all.
-                </Text>
-              </Box>
+          </motion.div>
+
+          <Flex
+            align="start"
+            gap={{ base: '44px', md: '84px' }}
+            justifyContent="space-around"
+            direction={{ base: 'column', md: 'row' }}
+            mt="64px"
+          >
+            <Flex direction="column" gap={{ base: '44px', md: '84px' }}>
+              <motion.div
+                style={{ width: '100%', position: 'relative' }}
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.5, delay: 0.4 },
+                }}
+              >
+                {/* Unrivaled Legacy */}
+                <Box border="1px solid rgba(219, 219, 219 , 0.3)" p="40px 47px" borderRadius="16px">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
+                    Risk-Tiered Portfolios
+                  </Heading>
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
+                    5-6 bundles: conservative → aggressive.
+                    <br /> Adapt for risk-return balance.
+                  </Text>
+                </Box>
+              </motion.div>
+              <motion.div
+                style={{ width: '100%', position: 'relative' }}
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.5, delay: 0.4 },
+                }}
+              >
+                <Box border="1px solid rgba(219, 219, 219 , 0.3)" p="40px 47px" borderRadius="16px">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
+                    Cross-Coin Gains
+                  </Heading>
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
+                    Earn across liquid cryptos (not just top coins).
+                    <br /> Adapt for more potential.
+                  </Text>
+                </Box>
+              </motion.div>
             </Flex>
+            <Box>
+              <motion.div
+                style={{ width: '100%', position: 'relative' }}
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.5, delay: 0.4 },
+                }}
+              >
+                <Box border="1px solid rgba(219, 219, 219 , 0.3)" p="40px 47px" borderRadius="16px">
+                  <Heading
+                    fontSize={{ base: '20px', md: '24px' }}
+                    fontWeight="600"
+                    mb="16px"
+                    color="white"
+                  >
+                    Time-Aligned Solutions
+                  </Heading>
+                  <Text fontSize={{ base: '14px', md: '16px' }} color="#888" lineHeight="1.6">
+                    Short arbitrage, mid trend, long accumulation.
+                    <br /> Pick your timeline.
+                  </Text>
+                </Box>
+              </motion.div>
+            </Box>
           </Flex>
         </Box>
         <Box

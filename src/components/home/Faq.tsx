@@ -159,7 +159,7 @@ const FAQ: FC = () => {
         </Heading>
       </Center>
 
-      <Center w="100%" px="20px" pb="120px">
+      <Center w="100%" px="20px" pb={{ base: '60px', md: '120px' }}>
         <Box maxW="1200px" w="100%">
           <VStack spacing="20px" align="stretch">
             {faqData.map((faq, index) => (

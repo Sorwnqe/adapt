@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Flex, Button, Image } from '@chakra-ui/react'
+import { Box, Center, Heading, Flex, Button, Image, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { FC, useEffect, useRef, useState } from 'react'
 import { useLitePaperModal } from '../../ModalContext'
@@ -28,7 +28,7 @@ const LitePaper: FC = () => {
 
   return (
     <>
-      <motion.div
+      {/* <motion.div
         style={{ width: '100%' }}
         initial={{ y: 50, opacity: 0 }}
         whileInView={{
@@ -47,10 +47,10 @@ const LitePaper: FC = () => {
             Litepaper
           </Heading>
         </Center>
-      </motion.div>
+      </motion.div> */}
 
-      <Center w="100%" px="20px" mb="80px">
-        <Box maxW="1280px" w="100%" position="relative">
+      <Center w="100%" px="20px" mb="80px" id="Litepaper">
+        <Box maxW="1200px" w="100%" position="relative">
           {/* 地球背景图片 - 按顺序动画：黑色背景入，白圈入，图片入 */}
           <Box
             position="relative"
@@ -151,6 +151,7 @@ const LitePaper: FC = () => {
             align="flex-start"
             justify="space-between"
             gap="60px"
+            w="100%"
             px={{ base: '0', md: '40px' }}
           >
             {/* 左侧内容 */}
@@ -189,16 +190,16 @@ const LitePaper: FC = () => {
             </Box>
 
             {/* 右侧内容 */}
-            <Box flex="1" maxW={{ base: '100%', lg: '600px' }}>
-              <Heading fontSize="20px" lineHeight="1.4" color="white" mb="8px">
+            <Box>
+              <Text fontSize="20px" lineHeight="1.4" color="white" mb="8px">
                 Reinforcement Learning and Market
-              </Heading>
-              <Heading fontSize="20px" lineHeight="1.4" color="white" mb="8px">
+              </Text>
+              <Text fontSize="20px" lineHeight="1.4" color="white" mb="8px">
                 Regime Detection AI Specialized
-              </Heading>
-              <Heading fontSize="20px" lineHeight="1.4" color="white">
+              </Text>
+              <Text fontSize="20px" lineHeight="1.4" color="white">
                 for Volatile Markets & Complex Systems
-              </Heading>
+              </Text>
             </Box>
           </Flex>
         </Box>

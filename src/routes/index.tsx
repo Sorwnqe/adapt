@@ -1,17 +1,21 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Box, Center, Flex, Heading, Text, Image, Button, Divider } from '@chakra-ui/react'
+import { Box, Center, Flex, Heading, Text, Button, Divider } from '@chakra-ui/react'
 import { FC } from 'react'
 import { motion } from 'framer-motion'
 import { keyframes } from '@emotion/react'
-import HomeCard from '../components/home/card'
 import TasselEffect from '../components/TasselEffect'
-import Performance from '../components/home/Performance'
+import About from '../components/home/About'
 import titleAnimation from '../ani'
-import Vision from '../components/home/Vision'
 import Pioneer from '../components/home/Pioneer'
-import Team from '../components/home/Team'
+// import Team from '../components/home/Team'
 import LitePaper from '../components/home/LitePaper'
-import FAQ from '../components/home/Faq'
+import MarketChanges from '../components/home/MarketChanges'
+import Results from '../components/home/Results'
+import Quant from '../components/home/Quant'
+import Netutral from '../components/home/Netutral'
+import Historical from '../components/home/Historical'
+import Team2 from '../components/home/Team2'
+import HeroCarousel from '../components/home/HeroCarousel'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -82,7 +86,7 @@ function Index() {
         <Flex
           direction="column"
           w="100%"
-          maxW="1280px"
+          maxW="1200px"
           align="center"
           px="20px"
           h={{ base: '500px', md: '900px' }}
@@ -107,7 +111,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                {t('The 1st Meta Reinforcement Learning AI Agent that adapts to ALL ')}
+                The 1st One-Stop Portal for On-Chain Crypto Quantitative Wealth Growth, powered by
               </Text>
               <Text
                 fontSize={{ base: '16px', md: '22px' }}
@@ -115,16 +119,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                {t('complex market conditions.')}
-              </Text>
-
-              <Text
-                fontSize={{ base: '16px', md: '22px' }}
-                color="#C5C5C5"
-                fontWeight={400}
-                lineHeight="28px"
-              >
-                {t('Incubated by VakLabs technology.')}
+                Meta-RL Agent Adaptive to All Complex Market Conditions.
               </Text>
 
               <Button
@@ -153,7 +148,7 @@ function Index() {
           <TasselEffect />
         </Center>
       </motion.div>
-      <Box>
+      {/* <Box>
         <motion.div
           style={{ width: '100%' }}
           initial={{ y: 50, opacity: 0 }}
@@ -168,66 +163,19 @@ function Index() {
             <Box>Mechanism</Box>
           </Flex>
         </motion.div>
-      </Box>
-      <motion.div
-        style={{ width: '100%', position: 'relative' }}
-        initial={{ y: 50, opacity: 0 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5, delay: 0.4 },
-        }}
-      >
-        <Center w="100%" mt="40px">
-          <Flex
-            maxW="1280px"
-            color="#fff"
-            w="100%"
-            pb={{ base: '22px', md: '82px' }}
-            px="20px"
-            flexDirection={{ base: 'column', md: 'row' }}
-          >
-            <Box
-              pos={{ base: 'initial', md: 'absolute' }}
-              bottom="0"
-              left="0"
-              w="100%"
-              h="110%"
-              zIndex="-1"
-            >
-              <Image src="/images/market-changes.png" w="100%" h="110%" objectFit="contain" />
-            </Box>
-            <Box>
-              <Heading
-                mb="34px"
-                fontSize={{ base: '24px', md: '40px' }}
-                lineHeight={{ base: '24px', md: '46px' }}
-                fontWeight="400"
-                color="#fff"
-              >
-                Market changes So…we just Adapt.
-                <br />
-              </Heading>
-              <Text color="#868686" fontSize="19px">
-                Meta-RL lets AI trading agents adapt to
-              </Text>
-              <Text color="#868686" fontSize="19px">
-                any market - without retraining
-              </Text>
-
-              <Flex mt="50px" gap="30px" justify="space-between">
-                <HomeCard />
-              </Flex>
-            </Box>
-          </Flex>
-        </Center>
-      </motion.div>
-      <Performance />
-      <Vision />
+      </Box> */}
+      <HeroCarousel />
+      <About />
+      <MarketChanges />
       <Pioneer />
-      <Team />
+      <Results />
+      <Quant />
+      <Netutral />
+      <Historical />
+      {/* <Vision /> */}
+      <Team2 />
       <LitePaper />
-      <FAQ />
+      {/* <FAQ /> */}
       <Divider />
     </Center>
   )

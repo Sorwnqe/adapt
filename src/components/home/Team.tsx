@@ -10,6 +10,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
+import Title from './Title'
 
 const teamMembers = [
   {
@@ -107,7 +108,7 @@ const TeamCard = ({
 
 const Team = () => {
   return (
-    <Box w="100%" py={{ base: '40px', md: '80px' }} px="20px" mb="60px" maxW="1280px" id="Team">
+    <Box w="100%" py={{ base: '40px', md: '80px' }} px="20px" mb="60px" maxW="1200px" id="Team">
       <motion.div
         style={{ width: '100%' }}
         initial={{ y: -100, opacity: 0.3 }}
@@ -118,14 +119,7 @@ const Team = () => {
         }}
       >
         <Box>
-          <Heading
-            textAlign="center"
-            fontSize={{ base: '32px', md: '48px' }}
-            fontWeight="600"
-            color="white"
-          >
-            Team
-          </Heading>
+          <Title>Team</Title>
           <Heading
             fontSize={{ base: '32px', md: '40px' }}
             fontWeight="400"
@@ -133,7 +127,9 @@ const Team = () => {
             mb="10px"
             mt="50px"
           >
-            We Beat The Market
+            Tribute to the
+            <br />
+            Medallion Fund
           </Heading>
           <Text fontSize="16px" color="#888" lineHeight="1.6">
             <br />

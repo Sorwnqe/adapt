@@ -43,6 +43,7 @@ const NavBtn = ({ children, onClick }: { children: ReactNode; onClick?: () => vo
     </Box>
   )
 }
+// Home         Strategy         Team         About
 const MobileMenu = () => {
   return (
     <>
@@ -55,10 +56,11 @@ const MobileMenu = () => {
         <MenuList bg="#282828" bgImg="/images/Backtest-Results-bg.png" p="8px" w="320px">
           <Box>
             <Item onClick={() => jumpAnchor('Home')}>Home</Item>
-            <Item onClick={() => jumpAnchor('Performance')}>Performance</Item>
-            <Item onClick={() => jumpAnchor('Vision')}>Vision</Item>
+            <Item onClick={() => jumpAnchor('Strategy')}>Strategy</Item>
             <Item onClick={() => jumpAnchor('Team')}>Team</Item>
+            {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
             <Item onClick={() => jumpAnchor('Litepaper')}>Litepaper</Item>
+            <Item onClick={() => jumpAnchor('About')}>About</Item>
             <Button
               color="#c8c8c8"
               fontWeight="400"
@@ -87,7 +89,7 @@ export const NavigationBar: FC = () => {
 
   return (
     <Center as="nav" className={router === '/' ? '' : 'black'} w="100%" id="Home">
-      <Flex justify="space-between" w="100%" maxW="1280px" px="20px" align="center" h="100px">
+      <Flex justify="space-between" w="100%" maxW="1200px" px="20px" align="center" h="100px">
         <Box as={Link} to="/">
           <Logo w="126px" h="36px" />
         </Box>
@@ -98,11 +100,11 @@ export const NavigationBar: FC = () => {
         ) : (
           <HStack gap="60px" fontSize="16px">
             <NavBtn onClick={() => jumpAnchor('Home')}>Home</NavBtn>
-            <NavBtn onClick={() => jumpAnchor('Performance')}>Performance</NavBtn>
-            <NavBtn onClick={() => jumpAnchor('Vision')}>Vision</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Strategy')}>Strategy</NavBtn>
             <NavBtn onClick={() => jumpAnchor('Team')}>Team</NavBtn>
+            {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
             <NavBtn onClick={() => jumpAnchor('Litepaper')}>Litepaper</NavBtn>
-
+            <NavBtn onClick={() => jumpAnchor('About')}>About</NavBtn>
             <Button
               color="#c8c8c8"
               fontWeight="400"

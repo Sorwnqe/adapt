@@ -55,10 +55,10 @@ const YearCard: React.FC<YearCardProps> = ({
         overflow="hidden"
       >
         <Flex direction="column" align="center" mb={6}>
-          <Text fontSize="5xl" fontWeight="medium" lineHeight="1">
+          <Text fontSize={{ base: '32px', md: '40px' }} lineHeight="1">
             {annualReturn}
           </Text>
-          <Text fontSize="sm" color="#8d8d8d" mt={1}>
+          <Text fontSize={{ base: '14px', md: '14px' }} mt="13px" color="#8d8d8d" mt={1}>
             Cumul. Ann. (SI)
           </Text>
         </Flex>
@@ -83,7 +83,7 @@ const YearCard: React.FC<YearCardProps> = ({
                 }}
               >
                 {data.map((_, index) => (
-                  <Cell key={`cell-${index}`} fill="rgba(68,68,68,0.8)" />
+                  <Cell key={`cell-${index}`} fill="rgba(68,68,68,0.8)" width={15} />
                 ))}
               </Bar>
             </BarChart>
@@ -98,7 +98,7 @@ const YearCard: React.FC<YearCardProps> = ({
         <Flex
           justify="center"
           align="center"
-          borderWidth="1px"
+          borderWidth="1.5px"
           borderColor="rgba(255, 255, 255, 0.28)"
           borderRadius="50%"
           w="40px"

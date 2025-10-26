@@ -58,7 +58,7 @@ const YearCard: React.FC<YearCardProps> = ({
           <Text fontSize={{ base: '32px', md: '40px' }} lineHeight="1">
             {annualReturn}
           </Text>
-          <Text fontSize={{ base: '14px', md: '14px' }} mt="13px" color="#8d8d8d" mt={1}>
+          <Text fontSize={{ base: '14px', md: '14px' }} mt="13px" color="#8d8d8d">
             Cumul. Ann. (SI)
           </Text>
         </Flex>

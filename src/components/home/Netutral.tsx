@@ -46,7 +46,7 @@ const Netutral = () => {
                 }}
               >
                 <Flex alignItems="center" direction="column">
-                  <Image src="/images/Performance-3.png" w="165px" h="165px" />
+                  <Image src="/images/Strategy-1.png" w="165px" h="165px" />
 
                   <Text fontSize={{ base: '16px', md: '18px' }} color="#888" mt="25px">
                     Funding rate <br />
@@ -64,7 +64,7 @@ const Netutral = () => {
                 }}
               >
                 <Flex alignItems="center" direction="column">
-                  <Image src="/images/Performance-3.png" w="165px" h="165px" />
+                  <Image src="/images/Strategy-2.png" w="165px" h="165px" />
 
                   <Text fontSize="18px" color="#888" mt="25px">
                     Futures-to-spot
@@ -83,7 +83,7 @@ const Netutral = () => {
                 }}
               >
                 <Flex alignItems="center" direction="column">
-                  <Image src="/images/Performance-3.png" w="165px" h="165px" />
+                  <Image src="/images/Strategy-3.png" w="165px" h="165px" />
 
                   <Text fontSize="18px" color="#888" mt="25px">
                     Cross-exchange

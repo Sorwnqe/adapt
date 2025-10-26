@@ -4,9 +4,12 @@ const HomeCard = () => {
   return (
     <Box
       w="100%"
-      bg="linear-gradient(to bottom, #000000, #121212)"
-      // bgImg={{ base: '/images/Backtest-Results-bg.png', md: 'unset' }}
-      border="1px solid rgba(255, 255, 255, 0.1)"
+      // bg="linear-gradient(to bottom, #000000, #121212)"
+      bgImg={{ base: '/images/large-card-bg.png' }}
+      backgroundSize="100%"
+      backgroundPosition="bottom"
+      backgroundRepeat="no-repeat"
+      // border="1px solid rgba(255, 255, 255, 0.1)"
       borderRadius="16px"
       p={{ base: '20px 40px', md: '33px 60px' }}
       backdropFilter="blur(8px)"

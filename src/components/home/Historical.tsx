@@ -258,7 +258,7 @@ const Historical = () => {
               transition: { duration: 0.5, delay: 0.4 },
             }}
           >
-            <Box transform={{ base: '0', md: 'translateY(80%)' }}>
+            <Box mt={{ base: '0', md: '80%' }}>
               {yearsData[1] && (
                 <YearCard
                   year={yearsData[1].year}

@@ -1,7 +1,6 @@
 import { FC, ReactNode } from 'react'
 import {
   Box,
-  Button,
   Center,
   Flex,
   HStack,
@@ -61,7 +60,7 @@ const MobileMenu = () => {
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
             <Item onClick={() => jumpAnchor('Litepaper')}>Litepaper</Item>
             <Item onClick={() => jumpAnchor('About')}>About</Item>
-            <Button
+            {/* <Button
               color="#c8c8c8"
               fontWeight="400"
               padding="12px 21px"
@@ -74,7 +73,7 @@ const MobileMenu = () => {
               onClick={() => jumpAnchor('Footer')}
             >
               Official Links
-            </Button>
+            </Button> */}
           </Box>
         </MenuList>
       </Menu>
@@ -105,7 +104,7 @@ export const NavigationBar: FC = () => {
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
             <NavBtn onClick={() => jumpAnchor('Litepaper')}>Litepaper</NavBtn>
             <NavBtn onClick={() => jumpAnchor('About')}>About</NavBtn>
-            <Button
+            {/* <Button
               color="#c8c8c8"
               fontWeight="400"
               padding="12px 21px"
@@ -118,7 +117,7 @@ export const NavigationBar: FC = () => {
               onClick={() => jumpAnchor('Footer')}
             >
               Official Links
-            </Button>
+            </Button> */}
           </HStack>
         )}
       </Flex>

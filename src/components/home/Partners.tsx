@@ -7,7 +7,7 @@ const Partners = () => {
   const isMobile = useIsMobile()
   const techLogos = [
     {
-      src: '/images/logos/surge.png',
+      src: '/images/logos/logo-sui.png',
       title: 'Sui Network',
       href: 'https://sui.io/',
       description: (
@@ -18,7 +18,7 @@ const Partners = () => {
       ),
     },
     {
-      src: '/images/logos/surge.png',
+      src: '/images/logos/logo-cetus.png',
       title: 'Cetus',
       href: 'https://www.cetus.zone/',
       description: (
@@ -29,7 +29,7 @@ const Partners = () => {
       ),
     },
     {
-      src: '/images/logos/surge.png',
+      src: '/images/logos/logo-navi.png',
       title: 'Navi',
       href: 'https://naviprotocol.io/',
       description: (
@@ -39,7 +39,7 @@ const Partners = () => {
       ),
     },
     {
-      src: '/images/logos/surge.png',
+      src: '/images/logos/logo-surge.png',
       title: 'Surge',
       href: 'https://surgeai.io',
       description: (
@@ -49,7 +49,7 @@ const Partners = () => {
       ),
     },
     {
-      src: '/images/logos/surge.png',
+      src: '/images/logos/logo-sui.png',
       title: 'Sui Community',
       href: 'https://sui.io/community-events-hub',
       description: (

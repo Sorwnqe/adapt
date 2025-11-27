@@ -1,8 +1,10 @@
 import { Box, Center, Flex, Image, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import SuiLogo from '../icons/SuiLogo'
+import useIsMobile from '../../hooks/useIsMobile'
 
 const ANP3AndSui = () => {
+  const isMobile = useIsMobile()
   return (
     <Box position="relative" h={{ base: 'auto', md: '500px' }} w="100%" maxW="1200px">
       <motion.div
@@ -26,9 +28,11 @@ const ANP3AndSui = () => {
             collective intelligence,
           </Text>
           <Text mt="20px">beyond just the first x402 on SUI</Text>
-          <Center>
-            <SuiLogo width={50} height={40} />
-          </Center>
+          {isMobile && (
+            <Center>
+              <SuiLogo width={50} height={40} />
+            </Center>
+          )}
         </Flex>
         <Box
           position="absolute"

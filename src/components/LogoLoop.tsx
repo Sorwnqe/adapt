@@ -76,6 +76,7 @@ const LogoLoop: FC<LogoLoopProps> = ({ logos = [], boxHeight = 260 }) => {
           align="stretch"
           gap={{ base: 4, md: 6 }}
           minW="max-content"
+          py="20px"
         >
           {loopLogos.map((logo, index) => {
             const title = logo.title || ''

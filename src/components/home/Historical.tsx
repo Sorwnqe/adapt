@@ -1,7 +1,6 @@
-import React, { ReactNode, useState } from 'react'
-import { Box, Text, Flex, Icon, Heading, Center } from '@chakra-ui/react'
+import React, { ReactNode } from 'react'
+import { Box, Text, Flex, Center } from '@chakra-ui/react'
 import { BarChart, Bar, XAxis, ResponsiveContainer, Cell } from 'recharts'
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { motion } from 'framer-motion'
 
 // 类型定义
@@ -23,14 +22,14 @@ const YearCard: React.FC<YearCardProps> = ({
   year,
   annualReturn,
   data,
-  defaultExpanded = false,
+  // defaultExpanded = false,
   align = 'column',
 }) => {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  // const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
-  const handleToggle = () => {
-    setIsExpanded(!isExpanded)
-  }
+  // const handleToggle = () => {
+  //   setIsExpanded(!isExpanded)
+  // }
   return (
     <Box
       borderWidth="1px"
@@ -42,23 +41,23 @@ const YearCard: React.FC<YearCardProps> = ({
       overflow="hidden"
       transition="all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
       cursor="pointer"
-      onClick={handleToggle}
+      // onClick={handleToggle}
       _hover={{ borderColor: 'rgba(255, 255, 255, 0.5)' }}
       display="flex"
       flexDirection={align}
       h="fit-content"
     >
       <Box
-        maxH={isExpanded ? '400px' : '0px'}
-        opacity={isExpanded ? 1 : 0}
+        // maxH={isExpanded ? '400px' : '0px'}
+        // opacity={isExpanded ? 1 : 0}
         transition="all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
         overflow="hidden"
       >
         <Flex direction="column" align="center" mb={6}>
-          <Text fontSize={{ base: '32px', md: '40px' }} lineHeight="1">
+          <Text fontSize={{ base: '18px', md: '20px' }} lineHeight="1">
             {annualReturn}
           </Text>
-          <Text fontSize={{ base: '14px', md: '14px' }} mt="13px" color="#8d8d8d">
+          <Text fontSize={{ base: '14px', md: '16px' }} mt="10px" color="#8d8d8d">
             Cumul. Ann. (SI)
           </Text>
         </Flex>
@@ -89,12 +88,13 @@ const YearCard: React.FC<YearCardProps> = ({
             </BarChart>
           </ResponsiveContainer>
         </Box>
-      </Box>
 
-      <Flex justify="space-between" align="center" mt={isExpanded ? 6 : 0}>
-        <Text fontSize="40px" fontWeight="400">
+        <Text fontSize="20px" fontWeight="400" textAlign="center">
           {year}
         </Text>
+      </Box>
+
+      {/* <Flex justify="space-between" align="center">
         <Flex
           justify="center"
           align="center"
@@ -112,18 +112,15 @@ const YearCard: React.FC<YearCardProps> = ({
             <Icon as={IoIosArrowUp} size={20} />
           )}
         </Flex>
-      </Flex>
+      </Flex> */}
 
-      {!isExpanded && (
-        <Box position="absolute" top={0} left={0} right={0} h="1px" bg="rgba(255, 255, 255, 0.1)" />
-      )}
+      <Box position="absolute" top={0} left={0} right={0} h="1px" bg="rgba(255, 255, 255, 0.1)" />
     </Box>
   )
 }
 
 // 年度收益率图表主组件
 const Historical = () => {
-  // 示例数据
   const yearsData = [
     {
       year: '2021',
@@ -182,9 +179,9 @@ const Historical = () => {
   ]
 
   return (
-    <Center w="100%" color="#fff" px="20px" mt={{ base: '40px', md: '120px' }}>
+    <Center w="100%" color="#fff">
       <Box maxW="1200px" w="100%">
-        <motion.div
+        {/* <motion.div
           style={{ width: '100%', position: 'relative' }}
           initial={{ y: -50, opacity: 0 }}
           whileInView={{
@@ -198,12 +195,11 @@ const Historical = () => {
             fontWeight="400"
             lineHeight="1.2"
             mb="50px"
-            mt="87px"
           >
             Historical Quant Returns
           </Heading>
-        </motion.div>
-        <Flex w="100%" gap="30px" flexWrap="wrap">
+        </motion.div> */}
+        <Flex w="100%" gap="30px" flexWrap="wrap" flexDirection={{ base: 'column', md: 'row' }}>
           <Box flex={1}>
             <motion.div
               style={{ width: '100%', flex: '1' }}
@@ -221,7 +217,7 @@ const Historical = () => {
                     annualReturn={yearsData[0].annualReturn}
                     data={yearsData[0].data}
                     defaultExpanded
-                    align="column"
+                    align="column-reverse"
                   />
                 )}
               </Box>

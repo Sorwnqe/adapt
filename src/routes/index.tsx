@@ -8,14 +8,14 @@ import About from '../components/home/About'
 import titleAnimation from '../ani'
 import Pioneer from '../components/home/Pioneer'
 // import Team from '../components/home/Team'
-import LitePaper from '../components/home/LitePaper'
 import MarketChanges from '../components/home/MarketChanges'
-import Results from '../components/home/Results'
-import Quant from '../components/home/Quant'
-import Netutral from '../components/home/Netutral'
-import Historical from '../components/home/Historical'
-import Team2 from '../components/home/Team2'
 import HeroCarousel from '../components/home/HeroCarousel'
+import Mechanism from '../components/home/Mechanism'
+import Roadmap from '../components/home/Roadmap'
+import Protocol from '../components/home/Protocol'
+import ANP3AndSui from '../components/home/ANP3AndSui'
+import Partners from '../components/home/Partners'
+import LitePaper from '../components/home/LitePaper'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -111,7 +111,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                The 1st One-Stop Portal for On-Chain Crypto Quantitative Wealth Growth, powered by
+                The 1st Agent Network Protocol (ANP3) for crypto trading. Connected agents empower
               </Text>
               <Text
                 fontSize={{ base: '16px', md: '22px' }}
@@ -119,7 +119,7 @@ function Index() {
                 fontWeight={400}
                 lineHeight="28px"
               >
-                Meta-RL Agent Adaptive to All Complex Market Conditions.
+                expert-like trading & real-time market adaptation.
               </Text>
 
               <Button
@@ -167,13 +167,16 @@ function Index() {
       <HeroCarousel />
       <About />
       <MarketChanges />
+      {/* <Netutral /> */}
+      <Protocol />
+      <ANP3AndSui />
+      <Mechanism />
       <Pioneer />
-      <Results />
-      <Quant />
-      <Netutral />
-      <Historical />
+      <Roadmap />
+      <Partners />
+      {/* <Historical /> */}
       {/* <Vision /> */}
-      <Team2 />
+      {/* <Team2 /> */}
       <LitePaper />
       {/* <FAQ /> */}
       <Divider />

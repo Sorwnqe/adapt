@@ -17,3 +17,7 @@ body {
   font-family: MODERNIST, sans-serif;
   overflow-x: hidden;
 }
+
+.strategy-swiper.swiper-backface-hidden .swiper-slide {
+  height:  auto !important;
+}

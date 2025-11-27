@@ -14,7 +14,7 @@ interface TextSwiperProps {
 
 const TextSwiper: React.FC<TextSwiperProps> = ({ texts, speed = 1000, delay = 3000 }) => {
   return (
-    <Box h={{ base: '240px', md: '440px' }} w="100%" overflow="hidden" position="relative">
+    <Box h={{ base: '140px', md: '340px' }} w="100%" overflow="hidden" position="relative">
       <Swiper
         direction="vertical"
         slidesPerView={3}
@@ -38,7 +38,7 @@ const TextSwiper: React.FC<TextSwiperProps> = ({ texts, speed = 1000, delay = 30
                 transition="all 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
               >
                 <Text
-                  fontSize={{ base: isActive ? '20px' : '18px', md: isActive ? '57px' : '29px' }}
+                  fontSize={{ base: isActive ? '20px' : '18px', md: isActive ? '44px' : '40px' }}
                   fontWeight="bold"
                   color={isActive ? 'white' : '#343434'}
                   textAlign="center"
@@ -60,32 +60,18 @@ const TextSwiper: React.FC<TextSwiperProps> = ({ texts, speed = 1000, delay = 30
 
 const HeroCarousel: React.FC = () => {
   const topTexts = [
-    <>
-      Profit From Volatility,
-      <br /> Adapt Across Bull & Bear
-    </>,
-    <>
-      Multi-Strategy,
-      <br />
-      At Your Fingertips
-    </>,
+    <>Agents Adapt, We Conquer Bull & Bear</>,
+    <>Multi-Strategy, At Your Fingertips</>,
 
-    <>
-      Intent-Driven Gateway
-      <br />
-      to Crypto Quant
-    </>,
+    <>Million Agents, One Empire.</>,
 
-    <>
-      On-Chain Medallion Fund: Open to All
-      <br />
-      DeFi-Composable, Endless Scenarios
-    </>,
+    <>Same tongue, one-click settle, live evolve.</>,
+    <>Wall Street in your pocket…</>,
   ]
 
   const defaultLogo = (
     <Box
-      w="80px"
+      w={{ base: '60px', md: '80px' }}
       h="80px"
       borderRadius="lg"
       display="flex"
@@ -118,7 +104,7 @@ const HeroCarousel: React.FC = () => {
         </Box>
 
         <Flex direction="column" align="center" w="100%" px={8}>
-          <Box mb={8} w="100%">
+          <Box w="100%">
             <TextSwiper texts={topTexts} speed={1000} delay={3000} />
           </Box>
         </Flex>

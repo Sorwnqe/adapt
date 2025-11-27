@@ -70,17 +70,17 @@ export const Footer: FC = () => {
               mb="40px"
               color="#fff"
             >
-              AI That Adapts
+              Adapt Now,
               <br />
-              Market That Reward.
+              Thrive Always.
             </Heading>
 
             <Text fontSize="16px" color="#868686" mb="20px" lineHeight="24px">
-              Breakthrough RL algorithm that adapts
+              Adapt ANP3 will become the "HTTP" Standard for
               <br />
-              with market conditions, powered by
+              agents, pushing encrypted quantification into the
               <br />
-              VakLabs technology
+              era of multi-agant adaptation.
             </Text>
 
             {/* Social Icons */}
@@ -92,12 +92,12 @@ export const Footer: FC = () => {
                   h="44px"
                   borderRadius="50%"
                   bg="#101010"
-                  color="#B9B9B9"
+                  color="#414141"
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
                   cursor="pointer"
-                  _hover={{ bg: '#2a2a2a' }}
+                  _hover={{ bg: '#2a2a2a', color: '#B9B9B9' }}
                   transition="background 0.2s"
                   as="a"
                   href={social.link}

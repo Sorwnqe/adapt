@@ -54,12 +54,14 @@ const MobileMenu = () => {
         </MenuButton>
         <MenuList bg="#282828" bgImg="/images/Backtest-Results-bg.png" p="8px" w="320px">
           <Box>
-            <Item onClick={() => jumpAnchor('Home')}>Home</Item>
-            <Item onClick={() => jumpAnchor('Strategy')}>Strategy</Item>
-            <Item onClick={() => jumpAnchor('Team')}>Team</Item>
+            <NavBtn onClick={() => jumpAnchor('Home')}>Home</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Mechanism')}>Mechanism</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Strategy')}>Strategy</NavBtn>
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
-            <Item onClick={() => jumpAnchor('Litepaper')}>Litepaper</Item>
-            <Item onClick={() => jumpAnchor('About')}>About</Item>
+            <NavBtn onClick={() => jumpAnchor('Partners')}>Partners</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Roadmap')}>Roadmap</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Litepaper')}>Litepaper</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('About')}>About</NavBtn>
             {/* <Button
               color="#c8c8c8"
               fontWeight="400"

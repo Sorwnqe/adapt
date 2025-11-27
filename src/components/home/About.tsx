@@ -13,7 +13,7 @@ const About = () => {
           transition: { duration: 0.5, delay: 0.5 },
         }}
       >
-        <Center w="100%" color="#fff" px="20px">
+        <Center w="100%" color="#fff" px="20px" id="Mechanism">
           <Box maxW="1200px" w="100%">
             <Flex
               direction={{ base: 'column', lg: 'row' }}

@@ -97,11 +97,14 @@ export const NavigationBar: FC = () => {
             <MobileMenu />
           </>
         ) : (
-          <HStack gap="60px" fontSize="16px">
+          <HStack gap="40px" fontSize="16px">
+            {/* Home       Mechanism       Strategy       Roadmap       Litepaper  */}
             <NavBtn onClick={() => jumpAnchor('Home')}>Home</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Mechanism')}>Mechanism</NavBtn>
             <NavBtn onClick={() => jumpAnchor('Strategy')}>Strategy</NavBtn>
-            <NavBtn onClick={() => jumpAnchor('Team')}>Team</NavBtn>
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
+            <NavBtn onClick={() => jumpAnchor('Partners')}>Partners</NavBtn>
+            <NavBtn onClick={() => jumpAnchor('Roadmap')}>Roadmap</NavBtn>
             <NavBtn onClick={() => jumpAnchor('Litepaper')}>Litepaper</NavBtn>
             <NavBtn onClick={() => jumpAnchor('About')}>About</NavBtn>
             {/* <Button

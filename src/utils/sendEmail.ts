@@ -132,7 +132,7 @@ Adapt Website`
       }
 
       // 生成 mailto URL
-      const recipient = 'info@adapt.com'
+      const recipient = 'info@adapt-anp3.ai'
       const subject = this.generateSubject(data)
       const body = this.generateEmailBody(data)
 

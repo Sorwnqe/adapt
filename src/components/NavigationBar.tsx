@@ -92,7 +92,7 @@ export const NavigationBar: FC = () => {
     <Center as="nav" className={router === '/' ? '' : 'black'} w="100%" id="Home">
       <Flex justify="space-between" w="100%" maxW="1200px" px="20px" align="center" h="100px">
         <Box as={Link} to="/">
-          <Logo w="126px" h="36px" />
+          <Logo w="140px" />
         </Box>
         {isMobile ? (
           <>

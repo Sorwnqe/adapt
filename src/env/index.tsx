@@ -10,12 +10,12 @@ export const socials = [
   },
   {
     name: 'github',
-    link: 'github.com/agent-network-protocol/AgentNetworkProtocol',
+    link: 'https://github.com/agent-network-protocol/AgentNetworkProtocol',
     icon: <RiGithubFill size={18} />,
   },
   {
     name: 'medium',
-    link: 'medium.com/@AdaptAI',
+    link: 'https://medium.com/@AdaptAI',
     icon: <RiMediumFill size={18} />,
   },
 ]

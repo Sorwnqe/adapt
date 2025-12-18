@@ -131,6 +131,9 @@ function Index() {
                 padding="15px 60px"
                 fontSize={{ base: '18px', md: '22px' }}
                 borderRadius="24px"
+                as="a"
+                href="https://nodes.adapt-anp3.ai"
+                rel="noopener noreferrer"
                 sx={{
                   // background: '#131313',
                   'border-radius': '18px',
@@ -138,7 +141,7 @@ function Index() {
                   bgSize: 'cover',
                 }}
               >
-                Join Wishlist
+                Mint NFT
               </Button>
             </Heading>
           </Center>

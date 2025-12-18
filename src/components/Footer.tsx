@@ -211,7 +211,7 @@ export const Footer: FC = () => {
 
           <Text fontSize="12px" color="#333" lineHeight="16px">
             Disclaimer: The articles published on this site only represent personal views and have
-            nothing to do with the official position of Adapt.
+            nothing to do with the official position of Adapt-ANP3.
           </Text>
         </Box>
       </Box>

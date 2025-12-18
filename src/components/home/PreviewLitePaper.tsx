@@ -53,7 +53,7 @@ const PreviewLitePaper = () => {
   // 缩放与下载
   const zoomIn = () => setScale((s) => Math.min(s + 0.2, 3))
   const zoomOut = () => setScale((s) => Math.max(s - 0.2, 0.4))
-  const downloadPDF = () => window.open('/AdaptAI_technical_white_paper.pdf', '_blank')
+  const downloadPDF = () => window.open('/whitepaper/AdaptAI_technical_white_paper.pdf', '_blank')
 
   return (
     <Modal

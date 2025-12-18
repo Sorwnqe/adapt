@@ -206,7 +206,7 @@ export const Footer: FC = () => {
         <Box maxW="1200px" mx="auto" mt={{ base: '40px', md: '0' }}>
           {/* Copyright */}
           <Text fontSize="14px" color="#444" mb="10px">
-            Copyright © 2025 Adapt
+            Copyright © 2025 Adapt-ANP3
           </Text>
 
           <Text fontSize="12px" color="#333" lineHeight="16px">

@@ -11,7 +11,7 @@ import {
   MenuItemProps,
   MenuList,
 } from '@chakra-ui/react'
-import { Link, useRouter } from '@tanstack/react-router'
+import { Link, useNavigate, useRouter } from '@tanstack/react-router'
 import Logo from './Logo'
 import { jumpAnchor } from '../utils'
 import useIsMobile from '../hooks/useIsMobile'
@@ -44,6 +44,8 @@ const NavBtn = ({ children, onClick }: { children: ReactNode; onClick?: () => vo
 }
 // Home         Strategy         Team         About
 const MobileMenu = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <Menu>
@@ -54,7 +56,16 @@ const MobileMenu = () => {
         </MenuButton>
         <MenuList bg="#282828" bgImg="/images/Backtest-Results-bg.png" p="8px" w="320px">
           <Box>
-            <Item onClick={() => jumpAnchor('Home')}>Home</Item>
+            <Item>
+              <Box as={Link} to="/">
+                Home
+              </Box>
+            </Item>
+            <Item>
+              <Box as={Link} to="/product">
+                Product
+              </Box>
+            </Item>
             <Item onClick={() => jumpAnchor('Mechanism')}>Mechanism</Item>
             <Item onClick={() => jumpAnchor('Strategy')}>Strategy</Item>
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}
@@ -101,7 +112,16 @@ export const NavigationBar: FC = () => {
         ) : (
           <HStack gap="40px" fontSize="16px">
             {/* Home       Mechanism       Strategy       Roadmap       Litepaper  */}
-            <NavBtn onClick={() => jumpAnchor('Home')}>Home</NavBtn>
+            <NavBtn>
+              <Box as={Link} to="/">
+                Home
+              </Box>
+            </NavBtn>
+            <NavBtn>
+              <Box as={Link} to="/product">
+                Product
+              </Box>
+            </NavBtn>
             <NavBtn onClick={() => jumpAnchor('Mechanism')}>Mechanism</NavBtn>
             <NavBtn onClick={() => jumpAnchor('Strategy')}>Strategy</NavBtn>
             {/* <Item onClick={() => jumpAnchor('Team')}>Team</Item> */}

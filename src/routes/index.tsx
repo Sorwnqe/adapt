@@ -141,7 +141,7 @@ function Index() {
                   bgSize: 'cover',
                 }}
               >
-                Mint NFT
+                Join the presale
               </Button>
             </Heading>
           </Center>

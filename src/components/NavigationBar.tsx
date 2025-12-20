@@ -11,7 +11,7 @@ import {
   MenuItemProps,
   MenuList,
 } from '@chakra-ui/react'
-import { Link, useNavigate, useRouter } from '@tanstack/react-router'
+import { Link, useRouter } from '@tanstack/react-router'
 import Logo from './Logo'
 import { jumpAnchor } from '../utils'
 import useIsMobile from '../hooks/useIsMobile'
@@ -44,8 +44,6 @@ const NavBtn = ({ children, onClick }: { children: ReactNode; onClick?: () => vo
 }
 // Home         Strategy         Team         About
 const MobileMenu = () => {
-  const navigate = useNavigate()
-
   return (
     <>
       <Menu>

@@ -5,26 +5,26 @@ import Title from './Title'
 const roadmapData = [
   {
     id: 0,
-    label: '2025 Q4',
+    label: '2026 Q1',
     items: [
       'Complete Token TGE',
       'Launch decentralized governance module',
       'Activate token staking & voting functions',
-    ],
-  },
-  {
-    id: 1,
-    label: '2026 Q1',
-    items: [
-      'Release Adapt ANP3 Quantitative Agent SDK & support new strategy agent access & network communication',
-      'Onboard 1st batch of 2–10 quant teams',
-      'Launch multi-level quant products',
       'List on more top global exchanges',
     ],
   },
   {
-    id: 2,
+    id: 1,
     label: '2026 Q2',
+    items: [
+      'Release Adapt ANP3 Quantitative Agent SDK & Support new strategy agent access & network communication',
+      'Onboard 1st batch of 2–10 quant teams',
+      'Launch multi-level quant products',
+    ],
+  },
+  {
+    id: 2,
+    label: '2026 Q3',
     items: [
       'Launch "SWIFT" settlement system for quant agents',
       'Support automatic commission sharing',
@@ -33,7 +33,7 @@ const roadmapData = [
   },
   {
     id: 3,
-    label: '2026 Q3',
+    label: '2026 Q4',
     items: [
       'Achieve cross-exchange & cross-chain agent collaboration',
       'Drive Adapt ANP3 to become the de facto standard for crypto quant scenarios',

@@ -1,6 +1,22 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Box, Center, Flex, Heading, Text, Button, Divider } from '@chakra-ui/react'
-import { FC } from 'react'
+import {
+  Box,
+  Center,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Divider,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  AlertDialog,
+  useDisclosure,
+  AlertDialogCloseButton,
+} from '@chakra-ui/react'
+import { FC, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { keyframes } from '@emotion/react'
 import TasselEffect from '../components/TasselEffect'
@@ -20,7 +36,7 @@ import LitePaper from '../components/home/LitePaper'
 export const Route = createFileRoute('/')({
   component: Index,
 })
-
+;('https://nodes.adapt-anp3.ai')
 const GraduallyEnteringTextKeyframes = keyframes`
     0% {
         opacity: 0;
@@ -50,6 +66,13 @@ const GraduallyEnteringText: FC<{ text: string; delay?: number }> = ({ text, del
 }
 
 function Index() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = useRef()
+
+  const onIgnore = () => {
+    open
+  }
+
   return (
     <Center
       w="100%"
@@ -131,9 +154,7 @@ function Index() {
                 padding="15px 60px"
                 fontSize={{ base: '18px', md: '22px' }}
                 borderRadius="24px"
-                as="a"
-                href="https://nodes.adapt-anp3.ai"
-                rel="noopener noreferrer"
+                onClick={onOpen}
                 sx={{
                   // background: '#131313',
                   'border-radius': '18px',
@@ -183,6 +204,30 @@ function Index() {
       <LitePaper />
       {/* <FAQ /> */}
       <Divider />
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef as any}
+        onClose={onClose}
+        motionPreset="slideInBottom"
+        isCentered
+      >
+        <AlertDialogOverlay />
+        <AlertDialogContent bg="#1D1D1D">
+          <AlertDialogHeader textAlign="center">Confirm!</AlertDialogHeader>
+          <AlertDialogCloseButton />
+
+          <AlertDialogBody>
+            Purchased NFTs will be airdropped to your SUI wallet. Please stay tuned for official
+            announcements and submit your wallet address when requested
+          </AlertDialogBody>
+
+          <AlertDialogFooter>
+            <Button onClick={onIgnore} ml={3}>
+              I Understand
+            </Button>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </Center>
   )
 }

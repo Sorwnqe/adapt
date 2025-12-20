@@ -32,6 +32,7 @@ import Protocol from '../components/home/Protocol'
 import ANP3AndSui from '../components/home/ANP3AndSui'
 import Partners from '../components/home/Partners'
 import LitePaper from '../components/home/LitePaper'
+import { safeOpenExternal } from '../utils'
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -70,7 +71,7 @@ function Index() {
   const cancelRef = useRef()
 
   const onIgnore = () => {
-    open
+    safeOpenExternal('https://nodes.adapt-anp3.ai')
   }
 
   return (
@@ -213,7 +214,7 @@ function Index() {
       >
         <AlertDialogOverlay />
         <AlertDialogContent bg="#1D1D1D">
-          <AlertDialogHeader textAlign="center">Confirm!</AlertDialogHeader>
+          <AlertDialogHeader textAlign="center">Tips</AlertDialogHeader>
           <AlertDialogCloseButton />
 
           <AlertDialogBody>
